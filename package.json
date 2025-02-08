@@ -1,0 +1,25 @@
+{
+  "name": "wc-history",
+  "version": "1.0.0",
+  "description": "WeChat article history scraper",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run fetch && npm run generate",
+    "fetch": "node src/index.js",
+    "generate": "node src/generate-site.js",
+    "dev": "node --watch src/index.js",
+    "update": "node src/index.js && node src/generate-site.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.4.1",
+    "fs-extra": "^11.2.0",
+    "markdown-it": "^14.0.0",
+    "mustache": "^4.2.0",
+    "node-fetch": "^3.3.2",
+    "winston": "^3.11.0"
+  }
+}

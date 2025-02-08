@@ -1,0 +1,55 @@
+name: Daily WeChat Article Update
+
+on:
+  schedule:
+    # Run at 00:00 UTC (8:00 AM Beijing Time) every day
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-articles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check historical processing status
+        id: check_status
+        run: |
+          if [ -f "data/progress.json" ]; then
+            remaining=$(node -p "JSON.parse(require('fs').readFileSync('data/progress.json')).remainingCount || 1")
+            if [ "$remaining" -eq "0" ]; then
+              echo "Historical articles fully processed, proceeding with daily update"
+              echo "can_proceed=true" >> $GITHUB_OUTPUT
+            else
+              echo "Still processing historical articles (${remaining} remaining), skipping daily update"
+              echo "can_proceed=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "Progress file not found, assuming historical processing is not complete"
+            echo "can_proceed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run article update
+        if: steps.check_status.outputs.can_proceed == 'true'
+        run: npm run update
+        env:
+          WECHAT_BIZ_ID: ${{ secrets.WECHAT_BIZ_ID }}
+          WECHAT_TOKEN: ${{ secrets.WECHAT_TOKEN }}
+          WECHAT_COOKIE: ${{ secrets.WECHAT_COOKIE }}
+
+      - name: Commit and push if changes exist
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add .
+          git diff --staged --quiet || (git commit -m "Auto update: $(date +'%Y-%m-%d')" && git push)
