@@ -144,59 +144,12 @@ class WeChatScraper {
         return articles;
     }
 
-    async fetchArticleContent(url) {
-        try {
-            const response = await this.axiosInstance.get(url);
-            const $ = cheerio.load(response.data);
-
-            // Extract article content
-            const title = $('#activity-name').text().trim();
-            const author = $('#js_name').text().trim();
-            const publishTime = $('#publish_time').text().trim();
-            const content = $('#js_content').html();
-
-            // Download and replace images
-            const images = [];
-            $('#js_content img').each((i, elem) => {
-                const dataSrc = $(elem).attr('data-src');
-                if (dataSrc) {
-                    images.push({
-                        url: dataSrc,
-                        placeholder: `__IMG_${i}__`
-                    });
-                    $(elem).replaceWith(`__IMG_${i}__`);
-                }
-            });
-
-            return {
-                title,
-                author,
-                publishTime,
-                content: $('#js_content').html(),
-                images
-            };
-        } catch (error) {
-            logger.error(`Error fetching article content from ${url}:`, error);
-            throw error;
-        }
+    // We don't fetch content in index.js anymore, only metadata
+    async getArticleUrl(article) {
+        return `https://mp.weixin.qq.com/s?__biz=${this.bizId}&mid=${article.mid}&idx=${article.idx}&sn=${article.sn}`;
     }
 
-    async downloadImage(imageUrl, articleId, placeholder) {
-        try {
-            const response = await this.axiosInstance.get(imageUrl, { responseType: 'arraybuffer' });
-            const extension = imageUrl.split('.').pop().split('?')[0] || 'jpg';
-            const fileName = `${placeholder.replace('__IMG_', '').replace('__', '')}.${extension}`;
-            const filePath = path.join(this.articlesDir, articleId, 'images', fileName);
 
-            await fs.ensureDir(path.dirname(filePath));
-            await fs.writeFile(filePath, response.data);
-
-            return fileName;
-        } catch (error) {
-            logger.error(`Error downloading image from ${imageUrl}:`, error);
-            return null;
-        }
-    }
 
     async saveArticle(article) {
         const articleDir = path.join(this.articlesDir, article.id);
@@ -206,31 +159,13 @@ class WeChatScraper {
             // Create article directory
             await fs.ensureDir(articleDir);
 
-            // Fetch full article content
-            const content = await this.fetchArticleContent(article.link);
-            const articleData = { ...article, ...content };
+            // Save only metadata and URL
+            const articleData = { 
+                ...article,
+                url: await this.getArticleUrl(article)
+            };
 
-            // Create images directory and download images
-            const imagesDir = path.join(articleDir, 'images');
-            await fs.ensureDir(imagesDir);
-
-            // Download and save images
-            let processedContent = articleData.content;
-            for (const image of articleData.images || []) {
-                const imageName = await this.downloadImage(image.url, article.id, image.placeholder);
-                if (imageName) {
-                    processedContent = processedContent.replace(
-                        image.placeholder,
-                        `<img src="images/${imageName}" alt="${article.title}" />`
-                    );
-                }
-            }
-
-            // Update content with local image paths
-            articleData.content = processedContent;
-            delete articleData.images; // Remove the images array as we've processed them
-
-            // Save article data
+            // Save article metadata
             await fs.writeJson(articleFile, articleData, { spaces: 2 });
 
             // Add a small delay to avoid rate limiting

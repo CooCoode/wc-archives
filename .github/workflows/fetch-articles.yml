@@ -1,0 +1,45 @@
+name: Fetch Initial Article List
+
+on:
+  workflow_dispatch:  # Allow manual triggering
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC (8 AM Beijing Time)
+
+# Ensure only one workflow runs at a time
+concurrency:
+  group: fetch-articles
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30  # Set timeout to 30 minutes for initial fetch
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch article list
+        run: node src/index.js
+        env:
+          WECHAT_BIZ_ID: ${{ secrets.WECHAT_BIZ_ID }}
+          WECHAT_TOKEN: ${{ secrets.WECHAT_TOKEN }}
+          WECHAT_COOKIE: ${{ secrets.WECHAT_COOKIE }}
+
+      - name: Commit and push if changes exist
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add data/
+          git diff --staged --quiet || (git commit -m "Update article list: $(date +'%Y-%m-%d')" && git push)

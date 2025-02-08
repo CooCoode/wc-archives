@@ -252,6 +252,11 @@ class SiteGenerator {
     }
 }
 
-// Run the generator
-const generator = new SiteGenerator();
-generator.generate().catch(console.error);
+// Export the SiteGenerator class
+export { SiteGenerator };
+
+// Only run if this is the main module
+if (import.meta.url === `file://${process.argv[1]}`) {
+    const generator = new SiteGenerator();
+    generator.generate().catch(console.error);
+}
