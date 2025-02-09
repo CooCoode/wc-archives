@@ -22,6 +22,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      changes_detected: ${{ steps.check_changes.outputs.changes_detected }}
     timeout-minutes: 9  # Set timeout to 9 minutes (GitHub Actions max is 360 minutes)
     env:
       TRIGGER_TIME: ${{ github.event.schedule }}
@@ -83,18 +85,21 @@ jobs:
           WECHAT_COOKIE: ${{ secrets.WECHAT_COOKIE }}
         run: node src/batch-process.js
 
-      - name: Commit and push if changes exist
+      - name: Check for changes in public directory
+        id: check_changes
         run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          # Stage changes
-          git add public/ data/
-          # Commit and push if there are changes
-          if ! git diff --quiet HEAD || ! git diff --staged --quiet; then
-            git commit -m "Batch update: Generate pages for articles ($(date +'%Y-%m-%d %H:%M:%S'))"
-            # Pull latest changes with rebase right before push
-            git pull origin main --rebase
-            git push origin main
+          if [[ -n "$(git status --porcelain public/)" ]]; then
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add public/
+            git commit -m "Update public content from batch process"
+            git push
           else
-            echo "No changes to commit"
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
           fi
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changes_detected == 'true'
+    uses: ./.github/workflows/deploy-pages.yml
