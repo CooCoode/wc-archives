@@ -5,6 +5,12 @@ on:
     - cron: '*/10 * * * *'  # Run every 10 minutes
   workflow_dispatch:  # Allow manual triggering
 
+# Sets permissions of the GITHUB_TOKEN
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 # Ensure only one workflow runs at a time
 concurrency:
   group: batch-update
