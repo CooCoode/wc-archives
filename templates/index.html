@@ -11,9 +11,15 @@
         <header class="text-center mb-8">
             <h1 class="text-4xl font-bold text-gray-800">SeeDAO WeChat Archive</h1>
             <p class="text-gray-600 mt-2">Last updated: {{lastUpdate}}</p>
+            <div class="mt-6 max-w-xl mx-auto">
+                <input type="text" id="searchInput" 
+                    class="w-full px-4 py-2 text-gray-700 bg-white border rounded-lg focus:border-blue-500 focus:outline-none" 
+                    placeholder="搜索文章标题、作者或内容...">
+            </div>
+            <p id="searchResults" class="text-gray-600 mt-2 hidden"></p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="articleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{#articles}}
             <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <a href="articles/{{id}}/index.html" class="block">
@@ -33,5 +39,51 @@
             {{/articles}}
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const articleGrid = document.getElementById('articleGrid');
+            const searchResults = document.getElementById('searchResults');
+            const articles = Array.from(articleGrid.getElementsByTagName('article'));
+            
+            function filterArticles(searchTerm) {
+                const term = searchTerm.toLowerCase();
+                let matchCount = 0;
+                
+                articles.forEach(article => {
+                    const title = article.querySelector('h2').textContent.toLowerCase();
+                    const author = article.querySelector('.font-medium').textContent.toLowerCase();
+                    const shouldShow = title.includes(term) || author.includes(term);
+                    
+                    article.style.display = shouldShow ? '' : 'none';
+                    if (shouldShow) matchCount++;
+                });
+                
+                // Update search results count
+                if (searchTerm) {
+                    searchResults.textContent = `找到 ${matchCount} 篇相关文章`;
+                    searchResults.classList.remove('hidden');
+                } else {
+                    searchResults.classList.add('hidden');
+                }
+            }
+            
+            // Debounce function to limit how often filterArticles runs
+            function debounce(func, wait) {
+                let timeout;
+                return function() {
+                    const context = this;
+                    const args = arguments;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(context, args), wait);
+                };
+            }
+            
+            // Add event listener with debounce
+            searchInput.addEventListener('input', debounce(function(e) {
+                filterArticles(e.target.value);
+            }, 300));
+        });
+    </script>
 </body>
 </html>
