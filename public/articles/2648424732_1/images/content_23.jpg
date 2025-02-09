@@ -1,0 +1,96 @@
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815.68 455.29">
+   <g data-name="图层 2">
+    <g data-name="图层 1">
+     <polygon points="510.48 135.77 608.17 84.9 509.05 29.93 510.48 135.77" style="fill:#ff410d">
+     </polygon>
+     <path d="M506,210.43a4.91,4.91,0,0,1-4.91-4.89L500.48,19a4.91,4.91,0,0,1,4.89-4.93h0A4.92,4.92,0,0,1,510.3,19l.62,186.55a4.91,4.91,0,0,1-4.89,4.93Z" style="fill:#ffcf55">
+     </path>
+     <circle cx="506.55" cy="211.3" r="16.69" style="fill:#ff410d">
+     </circle>
+     <circle cx="505.1" cy="15.92" r="8.49" style="fill:#ff410d">
+     </circle>
+     <path d="M0,455.29C74.93,306,229.42,203.54,407.84,203.54S740.74,306,815.68,455.29Z" style="fill:#ffd4c2">
+     </path>
+     <path d="M154.26,455.29a453.92,453.92,0,0,1,92.21-222.35,455.1,455.1,0,0,1,161.37-29.4c178.42,0,332.9,102.46,407.84,251.75Z" style="fill:#ffe4d9">
+     </path>
+     <circle cx="318.74" cy="427.8" r="18.46" style="fill:#fdb59d">
+     </circle>
+     <g style="opacity:0.2">
+      <path d="M315,413.74a18.47,18.47,0,0,1,15.72,28.15A18.47,18.47,0,0,1,303,418.11,18.43,18.43,0,0,1,315,413.74Z" style="fill:#fff">
+      </path>
+     </g>
+     <circle cx="443.62" cy="289.81" r="35.78" style="fill:#fdb59d">
+     </circle>
+     <g style="opacity:0.2">
+      <path d="M436.26,262.57a35.78,35.78,0,0,1,30.47,54.55A35.78,35.78,0,0,1,413.16,271,35.6,35.6,0,0,1,436.26,262.57Z" style="fill:#fff">
+      </path>
+     </g>
+     <circle cx="192.53" cy="363.23" r="60.57" style="fill:#fdb59d">
+     </circle>
+     <g style="opacity:0.2">
+      <path d="M180.07,317.12a60.56,60.56,0,0,1,51.56,92.34,60.56,60.56,0,0,1-90.67-78A60.29,60.29,0,0,1,180.07,317.12Z" style="fill:#fff">
+      </path>
+     </g>
+     <path d="M571.48,455.29a80.68,80.68,0,1,1,151.73,0Z" style="fill:#fdb59d">
+     </path>
+     <g style="opacity:0.2">
+      <path d="M571.48,455.29a80.79,80.79,0,0,1,7.18-69.81,80.66,80.66,0,0,1,132.77,61.58c0,2.78-.15,5.52-.42,8.23Z" style="fill:#fff">
+      </path>
+     </g>
+     <circle cx="415.53" cy="143.57" r="34.15" style="fill:#a7dcfb">
+     </circle>
+     <g style="opacity:0.5">
+      <circle cx="415.53" cy="143.57" r="20.72" style="fill:#fff">
+      </circle>
+     </g>
+     <circle cx="424.54" cy="257.68" r="17.7" style="fill:#0b2079">
+     </circle>
+     <circle cx="424.54" cy="257.68" r="7.39" style="fill:#ffcf55">
+     </circle>
+     <circle cx="389.14" cy="257.68" r="17.7" style="fill:#0b2079">
+     </circle>
+     <circle cx="389.14" cy="257.68" r="7.39" style="fill:#ffcf55">
+     </circle>
+     <circle cx="306.25" cy="257.68" r="17.7" style="fill:#0b2079">
+     </circle>
+     <circle cx="306.25" cy="257.68" r="7.39" style="fill:#ffcf55">
+     </circle>
+     <circle cx="270.85" cy="257.68" r="17.7" style="fill:#0b2079">
+     </circle>
+     <circle cx="270.85" cy="257.68" r="7.39" style="fill:#ffcf55">
+     </circle>
+     <polygon points="327.15 105.02 335.19 105.02 332.14 83.2 330.2 83.2 327.15 105.02" style="fill:#ffcf55">
+     </polygon>
+     <polygon points="297.7 38.7 290.34 46.06 278.28 28.41 280.05 26.64 297.7 38.7" style="fill:#ff410d">
+     </polygon>
+     <path d="M330.7,0a55.9,55.9,0,0,1-79.06,79.06Z" style="fill:#a7dcfb">
+     </path>
+     <g style="opacity:0.5">
+      <path d="M332.49,60.84a55.7,55.7,0,0,0,14.46-25A55.74,55.74,0,0,0,330.7,0L262.5,68.2A55.92,55.92,0,0,0,332.49,60.84Z" style="fill:#fff">
+      </path>
+     </g>
+     <circle cx="277.43" cy="25.79" r="5.21" style="fill:#ffcf55">
+     </circle>
+     <circle cx="331.17" cy="78.57" r="6.47" style="fill:#ff410d">
+     </circle>
+     <path d="M343.3,115.07a12.13,12.13,0,0,0-24.26,0Z" style="fill:#ff410d">
+     </path>
+     <rect x="306.15" y="115.07" width="50.98" height="5.29" transform="translate(663.28 235.42) rotate(-180)" style="fill:#a7dcfb">
+     </rect>
+     <path d="M362.4,150.18H330.52V116.59h21Zm-29.64-2.25h26.55l-9.43-29.09H332.76Z" style="fill:#a7dcfb">
+     </path>
+     <path d="M332.76,150.18H300.88l10.88-33.59h21ZM304,147.93h26.55V118.84H313.4Z" style="fill:#a7dcfb">
+     </path>
+     <polygon points="245.71 223.02 449.69 223.02 449.69 143.57 269.77 143.57 245.71 223.02" style="fill:#a7dcfb">
+     </polygon>
+     <rect x="245.71" y="222.97" width="203.98" height="26.57" transform="translate(695.39 472.52) rotate(-180)" style="fill:#a7dcfb">
+     </rect>
+     <rect x="240.2" y="244.61" width="215" height="13.08" rx="6.54" transform="translate(695.39 502.29) rotate(180)" style="fill:#ff410d">
+     </rect>
+     <g style="opacity:0.5">
+      <path d="M260.27,174.94H449.69v-9.51H263.15ZM250,208.85H449.69v-9.51H252.88Z" style="fill:#fff">
+      </path>
+     </g>
+    </g>
+   </g>
+  </svg>

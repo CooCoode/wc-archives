@@ -1,0 +1,82 @@
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198.89 577.84" width="100%" style="vertical-align: middle; max-width: 100%; width: 100%;">
+   <g>
+    <g>
+     <rect x="66.05" y="48.16" width="66.95" height="72.22" fill="rgb(255, 239, 232)">
+     </rect>
+     <rect x="66.05" y="272.63" width="66.95" height="282.81" fill="rgb(255, 239, 232)">
+     </rect>
+     <rect x="99.68" y="272.63" width="33.32" height="282.81" fill="rgb(255, 228, 217)">
+     </rect>
+     <rect x="72.85" y="144.36" width="53.34" height="104.3" fill="rgb(255,141,127)">
+     </rect>
+     <polygon points="126.72 144.35 72.34 144.35 66.05 120.37 133 120.37 126.72 144.35" fill="rgb(255, 228, 217)">
+     </polygon>
+     <polygon points="126.72 222.01 72.34 222.01 66.05 274.61 133 274.61 126.72 222.01" fill="rgb(255, 239, 232)">
+     </polygon>
+     <rect x="99.53" y="48.16" width="33.48" height="72.22" fill="rgb(255, 228, 217)">
+     </rect>
+     <path d="M133,48.16h0A51.38,51.38,0,0,0,99.53,0,51.37,51.37,0,0,0,66.05,48.16h67Z" fill="rgb(255,141,127)">
+     </path>
+     <rect x="80.48" y="154.94" width="7.84" height="32.64" rx="3.92" fill="rgb(255, 228, 217)">
+     </rect>
+     <rect x="80.48" y="192.86" width="7.84" height="11.21" rx="3.92" fill="rgb(255, 228, 217)">
+     </rect>
+     <polygon points="198.89 545.3 176.98 545.3 176.98 474.6 198.89 509.95 198.89 545.3" fill="rgb(255, 207, 85)">
+     </polygon>
+     <polygon points="129.84 545.3 151.75 545.3 151.75 474.6 129.84 509.95 129.84 545.3" fill="rgb(255, 207, 85)">
+     </polygon>
+     <rect x="144.59" y="412.03" width="39.55" height="133.35" transform="translate(328.73 957.4) rotate(-180)" fill="rgb(255,141,127)">
+     </rect>
+     <path d="M144.59,412h0c0-11.1,8.22-20.55,19.77-24.2,11.55,3.65,19.78,13.1,19.78,24.2H144.59Z" fill="rgb(255,141,127)">
+     </path>
+     <rect x="141.08" y="412.03" width="46.57" height="8.84" rx="4.23" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="141.08" y="542.63" width="46.57" height="8.84" rx="4.23" fill="rgb(255,141,127)">
+     </rect>
+     <polygon points="69.05 545.3 47.14 545.3 47.14 474.6 69.05 509.95 69.05 545.3" fill="rgb(255, 207, 85)">
+     </polygon>
+     <polygon points="0 545.3 21.91 545.3 21.91 474.6 0 509.95 0 545.3" fill="rgb(255, 207, 85)">
+     </polygon>
+     <rect x="14.75" y="412.03" width="39.55" height="133.35" transform="translate(69.05 957.4) rotate(-180)" fill="rgb(255,141,127)">
+     </rect>
+     <path d="M14.75,412h0c0-11.1,8.22-20.55,19.77-24.2,11.55,3.65,19.78,13.1,19.78,24.2H14.75Z" fill="rgb(255,141,127)">
+     </path>
+     <rect x="11.24" y="412.03" width="46.57" height="8.84" rx="4.23" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="11.24" y="542.63" width="46.57" height="8.84" rx="4.23" fill="rgb(255,141,127)">
+     </rect>
+     <polygon points="133.97 571.66 112.06 571.66 112.06 500.97 133.97 536.32 133.97 571.66" fill="rgb(255, 207, 85)">
+     </polygon>
+     <polygon points="64.92 571.66 86.83 571.66 86.83 500.97 64.92 536.32 64.92 571.66" fill="rgb(255, 207, 85)">
+     </polygon>
+     <rect x="79.67" y="438.4" width="39.55" height="133.35" transform="translate(198.89 1010.14) rotate(-180)" fill="rgb(255,141,127)">
+     </rect>
+     <path d="M79.67,438.4h0c0-11.1,8.22-20.55,19.77-24.2,11.55,3.65,19.78,13.1,19.78,24.2H79.67Z" fill="rgb(255,141,127)">
+     </path>
+     <rect x="76.16" y="438.4" width="46.57" height="8.84" rx="4.23" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="76.16" y="569" width="46.57" height="8.84" rx="4.23" fill="rgb(255,141,127)">
+     </rect>
+     <rect x="62.94" y="270.57" width="73.49" height="8.09" rx="4.01" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="62.94" y="44.11" width="73.49" height="8.09" rx="4.01" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="62.94" y="115.16" width="73.49" height="8.09" rx="4.01" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="69.05" y="219.1" width="61.27" height="8.09" rx="3.66" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="69.05" y="140.31" width="61.27" height="8.09" rx="3.66" fill="rgb(255, 207, 85)">
+     </rect>
+     <rect x="17.99" y="427.34" width="7.84" height="32.64" rx="3.92" fill="rgb(255, 228, 217)">
+     </rect>
+     <rect x="17.99" y="465.25" width="7.84" height="11.21" rx="3.92" fill="rgb(255, 228, 217)">
+     </rect>
+     <rect x="147.83" y="427.34" width="7.84" height="32.64" rx="3.92" fill="rgb(255, 228, 217)">
+     </rect>
+     <rect x="147.83" y="465.25" width="7.84" height="11.21" rx="3.92" fill="rgb(255, 228, 217)">
+     </rect>
+     <rect x="84.4" y="454.14" width="7.84" height="91.16" rx="3.92" fill="rgb(255, 228, 217)">
+     </rect>
+    </g>
+   </g>
+  </svg>
