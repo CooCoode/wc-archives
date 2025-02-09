@@ -96,7 +96,8 @@ jobs:
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'
             git add public/
             git commit -m "Update public content from batch process"
-            git push
+            git pull origin main --rebase
+            git push origin main
           else
             echo "changes_detected=false" >> $GITHUB_OUTPUT
           fi
