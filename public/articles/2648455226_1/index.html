@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeeDAO | 制衡-机器学习与零知识证明 - SeeDAO WeChat Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.10/dist/typography.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .article-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.4;
+        }
+        .article-meta {
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .article-digest {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        .article-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .category-tag {
+            padding: 0.25rem 0.75rem;
+            background: #e9ecef;
+            color: #495057;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+        .wechat-notice {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .wechat-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: #07C160;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        .wechat-button:hover {
+            background: #06B057;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="article-container">
+        <nav class="mb-8">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800">← Back to Archive</a>
+        </nav>
+
+        <header class="article-header">
+            <h1 class="article-title">SeeDAO | 制衡-机器学习与零知识证明</h1>
+            <div class="article-meta">
+                <span class="mr-4">作者: 翻译公会 Demian</span>
+                <time>发布时间: 2024-05-15 13:27:27</time>
+                <div class="article-categories">
+                    <span>分类: </span>
+                    <span>机器学习, 区块链, Web3</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="article-digest">
+            零知识证明的重要性。
+        </div>
+
+        <div class="mb-8">
+            <img src="images/cover.jpg" alt="Article cover" class="w-full h-auto rounded-lg">
+        </div>
+
+        <article class="article-content prose prose-lg mx-auto">
+            <section style="margin-left: 16px; margin-right: 16px; visibility: visible; opacity: 1;"><img class="rich_pages wxw-img" style="text-align: center; font-size: var(--articleFontsize); letter-spacing: 0.034em; visibility: visible; opacity: 1;" src="images/content_1.jpg"><br style="visibility: visible; opacity: 1;"></section><p style="margin-top: 16px; margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="color: rgb(63, 63, 63); font-size: 15px; letter-spacing: 1px; visibility: visible; opacity: 1;">在过去的几年里，区块链上的零知识证明已经在两个关键领域发挥了重要作用：(1) 通过处理链下交易并在主网上验证结果来对以太坊进行扩容；(2) 通过启用只有持有解密密钥的人才能查看的隐私交易，来保护用户隐私。对于区块链来说，这些特性为什么受欢迎已清晰可见：像以太坊这样的去中心化网络无法通过增加吞吐量或块大小来提高性能，因为如此一来，对验证节点的处理能力、带宽和延迟的要求都将高到难以承受（因此需要有效性 Rollups）；且所有的交易对任何人都是可见的（因此需要链上隐私解决方案）。<br style="visibility: visible; opacity: 1;"></span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">除此之外，ZKP（零知识证明） 也有第三类用途：它可以高效验证任何类型的计算（而不仅仅是链下的 EVM 计算）的正确性。这意味着，ZKP 的应用范围绝不会仅局限于区块链。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">利用 ZKP 的简洁验证计算能力，用户甚至能要求现存的所有数字产品（尤其是机器学习模型）具备与区块链一样的去信任化（trustless）的可验证性。（Don’t trust, verify it!）对区块链高效计算的需求也同时激励了 ZKP 的研究，现代零知识证明系统只需要更小的内存占用和更快的证明和验证时间——这使得我们现在可以在链上验证某些小型的机器学习算法。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">到目前为止，我们很可能都已经体验过与一款极其强大的机器学习产品进行交互的潜力。几天前，我使用 GPT-4 帮助我创建了一个能够在国际象棋中持续击败我的人工智能。这感觉就像是过去几十年来机器学习的所有进步的一个富有诗意的缩影：IBM花了十二年的时间才制造出Deep Blue，这是一个运行在32个节点的IBM RS/6000 SP计算机上的模型，能够每秒评估近2亿个国际象棋走法，于1997年击败了国际象棋冠军加里·卡斯帕罗夫。相比之下，我只花了几个小时，几乎不需要编程，就创建了一个能够战胜我的程序。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">诚然，我怀疑我创建的人工智能可能无法在国际象棋上击败加里·卡斯帕罗夫，但这并不是重点。重点是任何尝试使用 GPT-4 的人都可能有类似的超能力体验：只需很少的努力，你就能够创建一些接近或超越自己能力的东西。人人都是IBM的研究人员；人人都是加里·卡斯帕罗夫。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">显然，想到这实在是令人激动，但也有点令人生畏。对于任何加密行业从业者来说，他们在惊叹机器学习的能力之余，也会去思考其过度中心化的因素，并试图寻找将其去中心化的方式，以便透明地审计这个巨无霸参数网络。目前的大模型往往通过训练海量的公开数据来创建，但现在只有极少数人可以控制和拥有这些大模型。更具体地说，问题不是“AI 是否有巨大的价值”，而是 ”我们如何构建这些系统，以便任何与它们交互的人都能够从中获取经济利益，更进一步，还应该确保人们的数据隐私，让模型以尊重隐私权的方式来使用。”</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">最近，部分组织也在呼吁暂停或减缓类似 &nbsp;Chat-GPT 这样的 AI 项目的发展。但完全拒而远之也并非良策，更好的做法应该是推动模型开源，并在保护模型权重或数据隐私的情况下，使用基于链上的、完全可审计的隐私保护零知识证明来确保其模型安全。目前，将私有模型的权重和数据存储在区块链上并进行操作还存在一些挑战，但是随着零知识证明系统的进一步发展，这或许将在未来成为可能。</span></p><section style="text-align: center; margin-left: 16px; margin-right: 16px; visibility: visible; opacity: 1;"><img class="rich_pages wxw-img js_insertlocalimg" style="visibility: visible; opacity: 1;" src="images/content_2.jpg"></section><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">国际象棋 AI 是相对善良的：它的输入输出相对一致，也不使用违反知识产权或侵犯隐私的数据。但我们如何确保藏在 API 背后运行的模型确实就是那个人畜无害的模型呢？我们如何确保注入到链上模型中的数据确实是经过验证的、合法的数据呢？我们如何确保提交数据的“人”确实是人，而不是一个伪装起来潜伏攻击的肉鸡呢？或许 ZKP 能凭借其简洁地表示和验证任意程序的能力，来解决这些问题。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">需要注意的是，目前在链上进行机器学习时，ZKP 的主要用例是验证计算的正确性。也就是说通常 <strong style="visibility: visible; opacity: 1;">SNARKs</strong>（简洁非交互式知识证明）在机器学习上下文中最有用的是其“简洁”的性质。这是因为 ZKP 保护了“证明者”（以及其处理的数据）的隐私免受窥视者的侵犯。隐私增强技术，如全同态加密（FHE）、Functional Encryption 或可信执行环境（TEE），更适用于让不受信任的证明者对私有输入数据进行计算（更深入的技术探讨超出了本文的范围）。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">下面将会高屋建瓴地让大家了解一下可以在零知识中表示的机器学习应用类型。（如果想对 ZK 有更深入的了解，请参见零知识证明算法和硬件改进<strong style="visibility: visible; opacity: 1;">，</strong>Justin Thaler 关于 SNARK 性能的工作，此处和此处，或者我们的zero-knowledge-canon。）ZKP 通常将程序表示为算术电路：使用这些电路，证明者从公开和私密输入中生成证明（Proof），验证者则通过数学计算证明这个声明的输出是正确的——而不获取任何关于私密输入的信息。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">我们仍处于利用零知识证明进行链上验证的早期阶段，但算法的改进也在不断拓展其可行性的范围。以下是五种可以在机器学习中应用 ZKP 的方式。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;"><span style="font-weight: 600; visibility: visible; opacity: 1;">1. 模型真实性验证</span>：<span style="font-size: 15px; visibility: visible; opacity: 1;">人们期望证实某人声称的线上机器学习模型确实是其运行的那个模型。一些模型，其提供的 API 可能有多个版本，比如 GPT-3.5、GPT-4，一个便宜但精度较低，另一个更贵但性能更好。如果没有模型真实性验证，你其实无法知道在付出更昂贵费用时，究竟获得了哪一款模型实例。</span></span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">为此，需要对每个模型实例进行单独的证明。这一目标的实现方式是通过 Dan Boneh、Wilson Nguyen 和 Alex Ozdemir 的函数式承诺框架，这是一个基于 SNARK 的零知识承诺方案，允许模型所有者承诺一个模型，用户可以输入他们的数据并收到已运行的承诺模型的验证。一些基于Risc Zero（一个通用的基于 STARK 的虚拟机）之上构建的应用程序也在实现这个目标。Daniel Kang、Tatsunori Hashimoto、Ion Stoica 和 Yi Sun 进行的其他研究已经证明，验证 ImageNet 数据集上的有效推断是可能的，准确率为 92%（与最高性能的非ZK验证的ImageNet模型相当）。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">仅确认模型真实性的证明可能还不够。一个模型可能无法准确地表示给定的程序，所以人们希望提交的模型能被第三方审核。函数式承诺允许证明者确定它确实使用了其提交的模型，但除此之外并不能保证这个已承诺的模型的其他任何事情。如果我们可以让零知识证明对证明训练（见下面的例子4）有足够的表现力，我们或许有朝一日能够开始获得这些保证。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;"><strong style="visibility: visible; opacity: 1;">2. 模型完整性</strong>：我们希望确保同一算法在不同用户的数据上也以相同的方式运行。这在一些不希望有任何偏见和歧视的领域很有用，比如信用评分决策和贷款申请。这也可以使用函数式承诺。为此，需要承诺一个模型及其参数，并允许人们提交数据。根据输出将验证模型是否在每个用户的数据上运行得到的参数与其先前承诺的一致。或者，模型及其参数可以公开，用户自己可以证明他们将适当的模型和参数应用到他们自己的（经过验证的）数据上。这在医疗领域可能尤其有用，因为法律要求某些关于病人的信息保密。将来，这可能使得一个医疗诊断系统能够从完全私有的实时用户数据中学习和改进。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;"><strong style="visibility: visible; opacity: 1;">3. 数字认证</strong>：有时我们希望将外部验证方（例如任何可以产生数字签名的数字平台或硬件设备）的证明整合到链上运行的模型或智能合约中。为此，我们可以使用零知识证明验证签名，并将证明用作程序的输入。<strong style="visibility: visible; opacity: 1;">Anna Rose</strong> 和 <strong style="visibility: visible; opacity: 1;">Tarun Chitra</strong> 最近在一期 ZK 播客中与 <strong style="visibility: visible; opacity: 1;">Daniel Kang</strong> 和 <strong style="visibility: visible; opacity: 1;">Yi Sun</strong> 探讨了这个领域的最新进展：</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">具体来说，Daniel 和 Yi 最近发布了一项工作进展，研究了如何验证由具有“验证传感器“拍摄的图片是否经过了裁剪、缩放等修改的方法——这在你希望证明图片并未经过深度伪造，但确实经历了某种合法编辑的情况下非常有用。Dan Boneh 和 Trisha Datta 也进行了类似的工作，使用零知识证明来验证图片的来源。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">但是，更广义的来说，任何经过数字认证的信息都是这种验证方式的潜在对象：Jason Morton 正在开发的 <strong style="visibility: visible; opacity: 1;">EZKL库</strong>（后面会详细介绍）中将这种方式称为“赋予区块链视觉”。任何可签名终端：（例如，<strong style="visibility: visible; opacity: 1;">Cloudflare 的 SXG 服务</strong>，第三方公证人）都可以产生可以验证的数字签名，这对于证明信任方的来源和真实性非常有用。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><strong style="visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">4. 分布式推理或训练：</span></strong><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;"><strong style="visibility: visible; opacity: 1;">即以分布式的方式进行机器学习的推理或训练——允许人们向公共模型提交数据。为此，首先需要在链上部署一个模型，并使用 ZKP 来对其进行压缩。Jason Morton 的 <strong style="visibility: visible; opacity: 1;">EZKL</strong></strong><strong style="visibility: visible; opacity: 1;"> 库正在开发一种提取 ONXX（Open Neural Network Exchange）和 JSON 文件并将它们转换为 ZK-SNARK 电路的方法。</strong>在最近 ETH Denver 的一次演示表明，这可以用在诸如创建一个基于图像识别的链上寻宝游戏的应用中，其中游戏的创建者可以上传一张照片，生成一份图像的证明，然后玩家可以上传图像；验证器检查用户上传的图像是否足够匹配由创建者生成的证明。EZKL现在可以验证多达1亿个参数的模型，这意味着它可以用来在链上验证 <strong style="visibility: visible; opacity: 1;">ImageNet大小的模型</strong>（该模型有 6000 万个参数）。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">其他像 <strong style="visibility: visible; opacity: 1;">Modulus Labs</strong> 这样的团队正在对链上推理的不同证明系统进行基准测试<strong style="visibility: visible; opacity: 1;">。Modulus 的基准其 benchmark 测试达到了 1800 万个参数。在训练方面，</strong>Gensyn正在构建一个去中心化的计算系统，用户可以输入公共数据，并通过一些去中心化的节点网络进行模型训练和验证。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;"><strong style="visibility: visible; opacity: 1;">5. 真实身份证明(Proof of Personhood):</strong> 如果想验证某人是一个独特的个体（KYC），同时又不侵犯他们的隐私。这需要一些验证方式：比如先用生物识别扫描或提交加密的身份 ID。然后，您可以使用零知识证明来验证某人已经通过验证，而不揭示关于该人身份的任何信息，无论该身份是完全可识别的还是伪名的，如公钥那样。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">Worldcoin 正通过他们的 proof-of-personhood 协议实现这一点，它使用一种称为 orb 的设备扫描人们的虹膜，以证明他们是独一无二的人类，其关键是，为 WorldID（Worldcoin 的匿名数字护照） 创建的私钥，与项目的眼部扫描设备在本地生成的虹膜代码完全分离。这种分离完全将生物识别标识符与可能归属于个人的任何形式的用户密钥进行解耦。同时，Worldcoin <strong style="visibility: visible; opacity: 1;">也允许</strong> APP 嵌入 SDK，让用户可以使用 WorldID 登录，并利用零知识证明的隐私特性，允许应用程序检查人是否有 WorldID，但不启用对个体用户的跟踪（更多详情，请参阅此博客文章）。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1px; visibility: visible; opacity: 1;">这个例子是利用零知识证明的隐私保护特性来对抗更弱、更恶意的人工智能形式，因此其非常不同于上面列举的其他例子（例如，证明自己是真实的人类而不是机器人，不揭示任何关于自己的信息）。</span></p><section style="text-align: center; margin-left: 16px; margin-right: 16px; visibility: visible; opacity: 1;"><img class="rich_pages wxw-img js_insertlocalimg" style="visibility: visible; opacity: 1;" src="images/content_3.jpg"></section><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">SNARKs 证明系统的技术突破，已经成为众多机器学习模型上链的关键驱动力。一些团队也正在现有的架构（包括 Plonk、Plonky2、Air 等）中编写其自定义的 ZKP 电路。其中，<strong style="visibility: visible; opacity: 1;">Halo 2</strong> 已成为 Daniel Kang 等人以及 Jason Morton 的 EZKL 项目中常用的后端。Halo 2 的 prover time 是亚线性的，生成的证明大小通常只有几千字节，verifier time 也是常数。同时 Halo 2 也有一些强大的开发者工具。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">其他团队，比如 Risc Zero，正致力于通用的 VM 策略。还有一些团队正在使用 Justin Thaler 基于sum-check 协议的 super-efficient proof systems 创建自定义 ZKP 框架。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">一般而言，生成 ZK Proof 的时间和对其进行验证的时间，主要取决于硬件以及证明生成的电路的大小。无论被表达的程序是什么，其证明大小总是相对较小的，所以验证证明的开销是有限的。然而，有一些细微之处：对于像 Plonky2 这样使用 FRI-based 承诺方案的证明系统，证明的大小可能会增加。（除非最后用像 Plonk 或 Groth16 这样的基于双线性配对的 SNARK 工具作为后端，这些证明则不会随着被证明的语句复杂性而增大。）</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">对于机器学习模型的影响是，只要你设计出了一个能准确表达其模型的证明系统，实际上验证输出的成本将非常便宜。开发者最需要考虑的是 prover time 和内存：将模型表示为能相对快速地证明的方式，并且将证明大小控制在几千字节左右。为了证明 AI 模型在零知识证明中的正确执行，你需要编码所有的模型架构（layers，nodes 和激活函数），参数，约束和矩阵运算，并将它们正确表示为 ZK 电路。这也会涉及到将这些组件分解成可以在有限域上进行的算术运算。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">这个领域还处于初期阶段。在将模型转换为算术电路（有限域）的过程中，其精度和保真度可能会受到影响。模型参数，约束和矩阵乘法运算也可能会被近似和简化。此外，机器学习模型的参数和激活通常以 32 位的精度进行编码，但现在的零知识证明不能在必要的算术电路格式中表示 32 位浮点运算，否则将付出巨大的开销。因此，开发者可能选择 32 位整数已经被转换为 8 位精度的机器学习模型。这些类型的模型适合表示为零知识证明，但被验证的模型可能是对更高质量初始模型的粗略近似。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">这确实是一场迎头赶上的游戏。随着零知识证明变得更加优化，其上可用的机器学习模型复杂性也在增加。已经有一些有前景的领域：递归证明（Recursive Proof）可以通过允许证明被用作下一个证明的输入来减小总体证明的大小，从而进行证明压缩。也有一些新兴的框架，比如Apache Tensor 虚拟机 (TVM) 的 Linear A分支，它推出了一个 <strong style="visibility: visible; opacity: 1;">转译器</strong>，用于将浮点数转换为友好呈现的零知识整数。最后，我们在a16z crypto对未来的工作持乐观态度，相信将来的工作将使在SNARKs中表示32位整数变得更加合理。</span></p><section style="text-align: center; margin-left: 16px; margin-right: 16px; visibility: visible; opacity: 1;"><img class="rich_pages wxw-img js_insertlocalimg" style="visibility: visible; opacity: 1;" src="images/content_4.jpg"></section><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">零知识证明通过压缩来实现扩展：SNARKs 允许你对一个极其复杂的系统（一个虚拟机，一个机器学习模型）进行数学表述，使得验证它的成本小于运行它的成本。另一方面，机器学习通过扩张（expansion）实现扩展：今天的模型在更多的数据，参数，以及 GPU/TPU 的帮助下表现得更好。中心化的公司可以用几乎无限大的规模来运行服务器：收取 API 调用的费用，并覆盖其成本。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">区块链网络运营的经济模式几乎是相反的：开发者被鼓励优化他们的代码，使其在链上运行具有计算可行性（并且成本较低）。这种不对称性带来了巨大的好处：它创造了一种环境，使得证明系统需要变得更加高效。我们应尝试在机器学习领域中，也实现区块链所提供的同等好处，即可验证的所有权和可共享的真相。</span></p><p style="margin-left: 16px; margin-right: 16px; line-height: 2em; visibility: visible; opacity: 1;"><span style="font-size: 15px; letter-spacing: 1px; color: rgb(63, 63, 63); visibility: visible; opacity: 1;">区块链激励对 zk-SNARKs 算法优化的同时，计算网络中的每一个节点都会受益。</span></p><section style="font-size: 15px; line-height: 1.8; padding-right: 15px; padding-left: 15px; visibility: visible; opacity: 1;"><section style="text-align: right; font-size: 12px; color: rgb(62, 62, 62); visibility: visible; opacity: 1;"><p style="visibility: visible; opacity: 1;"><span style="background-color: rgb(157, 157, 252); visibility: visible; opacity: 1;">作者</span>｜ElenaBurger</p><p style="visibility: visible; opacity: 1;"><span style="background-color: rgb(157, 157, 252); visibility: visible; opacity: 1;">翻译</span>｜ Demian</p><p style="visibility: visible; opacity: 1;"><span style="background-color: rgb(157, 157, 252); visibility: visible; opacity: 1;">校对</span>｜Shawna</p><p style="visibility: visible; opacity: 1;"><span style="background-color: rgb(157, 157, 252); visibility: visible; opacity: 1;">排版</span>｜小空</p><p style="visibility: visible; opacity: 1;"><span style="background-color: rgb(157, 157, 252); visibility: visible; opacity: 1;">审核</span>｜Bo</p><p style="visibility: visible; opacity: 1;">「点击底部“阅读原文”即可跳转原文链接」</p></section><section style="text-align: center; justify-content: center; margin: 10px 0%; display: flex; flex-flow: row; visibility: visible; opacity: 1;"><section style="display: inline-block; vertical-align: middle; width: 30px; flex: 0 0 auto; height: auto; align-self: center; margin-right: 15px; margin-left: 15px; visibility: visible; opacity: 1;"><section style="margin-top: 10px; margin-bottom: 10px; line-height: 0; visibility: visible; opacity: 1;"><section style="vertical-align: middle; display: inline-block; line-height: 0; visibility: visible; opacity: 1;"><img style="vertical-align: middle; width: 100%; visibility: visible; opacity: 1;" src="images/content_5.jpg"></section></section></section></section></section><section style="text-align: center; margin-left: 16px; margin-right: 16px; visibility: visible; opacity: 1;"><img class="rich_pages wxw-img" style="width: 578px; height: 491px; visibility: visible; opacity: 1;" src="images/content_6.jpg"></section><section style="text-align: center; margin-left: 16px; margin-right: 16px; visibility: visible; opacity: 1;"><img class="rich_pages wxw-img" style="visibility: visible; opacity: 1;" src="images/content_7.jpg"></section>
+        </article>
+
+    </div>
+</body>
+</html>
