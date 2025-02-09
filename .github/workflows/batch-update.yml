@@ -60,6 +60,8 @@ jobs:
         run: npm ci
 
       - name: Debug workflow trigger
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           echo "=== Workflow Debug Information ==="
           echo "Trigger time: $TRIGGER_TIME"
@@ -73,10 +75,10 @@ jobs:
           echo "GitHub SHA: $GITHUB_SHA"
           
           echo "\n=== Repository Permissions ==="
-          gh api /repos/$REPOSITORY/actions/permissions --jq '.enabled'
+          gh api /repos/$REPOSITORY/actions/permissions --jq '.enabled' || echo "Failed to check permissions"
           
           echo "\n=== Workflow Status ==="
-          gh run list --limit 5 --workflow batch-update.yml
+          gh run list --limit 5 --workflow batch-update.yml || echo "Failed to list workflows"
 
       - name: Process batch of articles
         env:
@@ -99,15 +101,18 @@ jobs:
             echo "changes_detected=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Call deploy workflow
+      - name: Setup Pages
         if: steps.check_changes.outputs.changes_detected == 'true'
-        uses: actions/github-script@v7
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: actions/upload-pages-artifact@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'deploy-pages.yml',
-              ref: 'main'
-            })
+          path: public
+
+      - name: Deploy to GitHub Pages
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ github.token }}
