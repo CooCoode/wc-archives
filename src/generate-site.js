@@ -61,7 +61,7 @@ class SiteGenerator {
                     throw new Error('Not a URL');
                 }
             } catch (e) {
-
+                console.error(`Not a valid URL: ${cleanUrl}`);
                 return imageUrl;
             }
 
@@ -81,7 +81,7 @@ class SiteGenerator {
             
             return `images/${filename}`;
         } catch (error) {
-
+            console.error(`Error downloading image: ${error.message}`);
             return imageUrl; // Fallback to original URL if download fails
         }
     }
@@ -97,7 +97,7 @@ class SiteGenerator {
             
             if (article.link) {
                 try {
-
+                    console.log(`Fetching content from: ${article.link}`);
                     const response = await fetch(article.link);
                     const html = await response.text();
                     // Parse the HTML content
@@ -228,10 +228,12 @@ class SiteGenerator {
                     if (mainContent) {
                         const contentLength = mainContent.text().trim().length;
                         if (contentLength < 100) {
+                            console.log('Content too short, discarding');
                             mainContent = null;
                             contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
                         }
                     } else {
+                        console.log('No suitable content found');
                         contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
                     }
 
@@ -239,7 +241,7 @@ class SiteGenerator {
                         // Process images and clean up content
                         const articleImages = [];
                         const imgElements = mainContent.find('img');
-
+                        console.log(`Found ${imgElements.length} images in content`);
                         
                         for (let i = 0; i < imgElements.length; i++) {
                             const img = imgElements.eq(i);
@@ -267,7 +269,7 @@ class SiteGenerator {
                                     attrsToRemove.forEach(attr => img.removeAttr(attr));
                                     articleImages.push(filename);
                                 } catch (err) {
-
+                                    console.error(`Error downloading image ${dataSrc}:`, err.message);
                                 }
                             }
                         }
@@ -299,7 +301,7 @@ class SiteGenerator {
                     if (mainContent && mainContent.length > 0) {
                         // Process and download images
                         const imgElements = mainContent.find('img');
-
+                        console.log(`Found ${imgElements.length} images in content`);
                         
                         for (let i = 0; i < imgElements.length; i++) {
                             const img = imgElements.eq(i);
@@ -312,7 +314,7 @@ class SiteGenerator {
                                     img.attr('src', `images/${filename}`);
                                     articleImages.push(filename);
                                 } catch (err) {
-
+                                    console.error(`Error downloading image ${dataSrc}:`, err.message);
                                 }
                             }
                         }
@@ -366,7 +368,7 @@ class SiteGenerator {
                         contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
                     }
                 } catch (error) {
-
+                    console.error(`Error fetching article ${article.id}:`, error.message);
                     contentStatus = '无法访问文章。请点击下方链接访问原文。';
                 }
             }
@@ -374,7 +376,7 @@ class SiteGenerator {
             // Download cover image if present
             let localCover = '';
             if (article.cover) {
-
+                console.log(`Downloading cover image for article ${article.id}...`);
                 const filename = `cover${path.extname(article.cover) || '.jpg'}`;
                 localCover = await this.downloadImage(article.cover, article.id, filename);
             }
@@ -441,15 +443,15 @@ class SiteGenerator {
     }
 
     async generate() {
-
+        console.log('Starting site generation...');
         await this.initialize();
 
         // Load archive data
         const archive = await fs.readJson(path.join(this.dataDir, 'archive.json'));
-
+        console.log(`Found ${archive.articles.length} articles`);
 
         // Generate all article pages
-
+        console.log(`Processing all ${archive.articles.length} articles...`);
         
         for (const article of archive.articles) {
             try {
@@ -457,20 +459,20 @@ class SiteGenerator {
                 const articleFilePath = path.join(this.articlesDir, article.fileName);
                 const articleData = await fs.readJson(articleFilePath);
                 
-
-
+                console.log(`\nProcessing article: ${articleData.title}`);
+                console.log(`Article link: ${articleData.link}`);
                 await this.generateArticlePage(articleData);
-
+                console.log(`Successfully generated page for article: ${articleData.title}`);
             } catch (error) {
-
+                console.error(`Error generating page for article ${article.id}:`, error);
             }
         }
 
         // Generate index page
         await this.generateIndexPage(archive);
+        console.log('Generated index page');
 
-
-
+        console.log('Site generation complete!');
     }
 }
 
