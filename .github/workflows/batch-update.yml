@@ -8,11 +8,6 @@ on:
 # Sets permissions of the GITHUB_TOKEN
 permissions:
   contents: write      # Required for checkout and pushing changes
-  pages: write        # Required for deploying to Pages
-  id-token: write     # Required for deployment authentication
-  actions: write      # Required for triggering other workflows
-  deployments: write  # Required for deployments
-  checks: write       # Required for creating checks
 
 # Ensure only one workflow runs at a time
 concurrency:
@@ -101,19 +96,3 @@ jobs:
           else
             echo "changes_detected=false" >> $GITHUB_OUTPUT
           fi
-
-      - name: Setup Pages
-        if: steps.check_changes.outputs.changes_detected == 'true'
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        if: steps.check_changes.outputs.changes_detected == 'true'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
-
-      - name: Deploy to GitHub Pages
-        if: steps.check_changes.outputs.changes_detected == 'true'
-        uses: actions/deploy-pages@v4
-        with:
-          token: ${{ github.token }}
