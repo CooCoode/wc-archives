@@ -11,9 +11,15 @@
         <header class="text-center mb-8">
             <h1 class="text-4xl font-bold text-gray-800">SeeDAO WeChat Archive</h1>
             <p class="text-gray-600 mt-2">Last updated: 2025-02-09 00:28:29</p>
+            <div class="mt-6 max-w-xl mx-auto">
+                <input type="text" id="searchInput" 
+                    class="w-full px-4 py-2 text-gray-700 bg-white border rounded-lg focus:border-blue-500 focus:outline-none" 
+                    placeholder="搜索文章标题、作者或内容...">
+            </div>
+            <p id="searchResults" class="text-gray-600 mt-2 hidden"></p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="articleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <a href="articles/2648458657_1/index.html" class="block">
                     <div class="p-6">
@@ -15170,7 +15176,503 @@ Twitter Space:：https:&#x2F;&#x2F;twitter.com&#x2F;i&#x2F;spaces&#x2F;1mrxmkAzy
                     </div>
                 </a>
             </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417646_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">图解Gitcoin DAO：治理流程和运营模式</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Sig</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-25 14:11:08">2022-05-25 14:11:08</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417646_2/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">肯尼亚一村庄悄然推翻基本收入的最大谬见</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜wei</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-25 14:11:08">2022-05-25 14:11:08</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417621_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">如何在 DAO 中找到个人自由并实现自我价值？</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜yoki</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-24 14:58:41">2022-05-24 14:58:41</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417603_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">改变计算机历史的女性们</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Yuchen</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-23 13:27:52">2022-05-23 13:27:52</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417603_2/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">DAO.edu：去中心化学习的未来</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜dave</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-23 13:27:52">2022-05-23 13:27:52</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417252_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">好奇心与野心：当你选择辞职All In Web3</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Jeanne</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-21 08:27:22">2022-05-21 08:27:22</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417237_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Web 3.0 的基石：去中心化基础设施</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">SeeDAO</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-18 08:37:28">2022-05-18 08:37:28</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417237_2/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">一图读懂SeeDAO公会及项目</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">SeeDAO</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-18 08:37:28">2022-05-18 08:37:28</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417213_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">DAO的贡献者漏斗：用户、社区成员、贡献者、团队</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Jiang</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-17 15:46:08">2022-05-17 15:46:08</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417191_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">一文读懂关于加密艺术与NFT</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Yuchen</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-16 11:26:22">2022-05-16 11:26:22</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417161_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">为什么不应该对Web3过度狂热？</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜ScaSte</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-15 15:37:47">2022-05-15 15:37:47</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417151_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">加密货币：一种天然的慈善媒介</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜zik</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-14 15:14:50">2022-05-14 15:14:50</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417136_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">入门概念，什么是公共物品？</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Zik</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-13 15:03:13">2022-05-13 15:03:13</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417115_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">「SeeDAO 治理工程师」训练营 · 第一期</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">SeeDAO</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-12 09:55:59">2022-05-12 09:55:59</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648417115_2/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Arthur：NFT防黑指南</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会 Zhiyuan</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-12 09:55:59">2022-05-12 09:55:59</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416972_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">a16z：未来的工作来自DAO和加密网络，而不是公司</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Sig</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-10 16:11:42">2022-05-10 16:11:42</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416954_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Rafa：我离开了Web2，你也应该这样做</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">SeeDAO</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-09 13:55:06">2022-05-09 13:55:06</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416937_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">DAO贡献者技能三件套：心理建设、自我指导和促进</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜bo</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-08 15:55:37">2022-05-08 15:55:37</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416925_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Water &amp; Music：音乐NFT平台六大关键用户策略</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会MuTsing</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-07 12:05:32">2022-05-07 12:05:32</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416915_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">去中心化的黑暗面：极化、无政府与公共物品匮乏</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜ScaSte</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-06 11:09:54">2022-05-06 11:09:54</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416908_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">DAO 的动态管理：流动的身份和声誉</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Roy</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-05 14:01:58">2022-05-05 14:01:58</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416898_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">人物志 · 第二期  |  Rebecca：建一座没有围墙的 Web3 大学</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">宣传公会 DDD</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-04 12:07:45">2022-05-04 12:07:45</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416898_2/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">我为什么离开Facebook去Web3构建社交网络？</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜Aimee</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-04 12:07:45">2022-05-04 12:07:45</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416866_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">DAO 与合作社如何相互学习？</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会｜zik</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-03 15:00:22">2022-05-03 15:00:22</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416850_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">“把肝献给 DAO”：那些认为 DAO 是工作的未来的人</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会 zik</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-05-01 14:24:02">2022-05-01 14:24:02</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416836_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">太阳朋克：在以太坊时代重新认识公共物品</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会 Roy</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-04-30 15:39:25">2022-04-30 15:39:25</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416821_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">SeeDAO：一个 DAO 的孵化器</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">SeeDAO</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-04-29 03:59:11">2022-04-29 03:59:11</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416746_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Lens Protocol：搭建Web3平台的利器</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">产品公会 Will</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-04-28 13:04:23">2022-04-28 13:04:23</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416746_2/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">a16z：社区可组合性能够帮助Web2用户进入Web3吗？</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">翻译公会 dave</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-04-28 13:04:23">2022-04-28 13:04:23</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <a href="articles/2648416729_1/index.html" class="block">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">4.30  |  来 MetaShanghai，听一场春天音乐会</h2>
+                        <div class="flex flex-col space-y-2">
+                            <div class="text-sm text-gray-600">
+                                <span class="font-medium">MetaShanghai</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <time datetime="2022-04-27 15:12:00">2022-04-27 15:12:00</time>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const articleGrid = document.getElementById('articleGrid');
+            const searchResults = document.getElementById('searchResults');
+            const articles = Array.from(articleGrid.getElementsByTagName('article'));
+            
+            function filterArticles(searchTerm) {
+                const term = searchTerm.toLowerCase();
+                let matchCount = 0;
+                
+                articles.forEach(article => {
+                    const title = article.querySelector('h2').textContent.toLowerCase();
+                    const author = article.querySelector('.font-medium').textContent.toLowerCase();
+                    const shouldShow = title.includes(term) || author.includes(term);
+                    
+                    article.style.display = shouldShow ? '' : 'none';
+                    if (shouldShow) matchCount++;
+                });
+                
+                // Update search results count
+                if (searchTerm) {
+                    searchResults.textContent = `找到 ${matchCount} 篇相关文章`;
+                    searchResults.classList.remove('hidden');
+                } else {
+                    searchResults.classList.add('hidden');
+                }
+            }
+            
+            // Debounce function to limit how often filterArticles runs
+            function debounce(func, wait) {
+                let timeout;
+                return function() {
+                    const context = this;
+                    const args = arguments;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(context, args), wait);
+                };
+            }
+            
+            // Add event listener with debounce
+            searchInput.addEventListener('input', debounce(function(e) {
+                filterArticles(e.target.value);
+            }, 300));
+        });
+    </script>
 </body>
 </html>
