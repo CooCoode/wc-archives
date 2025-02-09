@@ -41,6 +41,14 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
+          # Pull latest changes with rebase
           git pull origin main --rebase
+          # Stage changes
           git add data/
-          git diff --staged --quiet || (git commit -m "Update article list: $(date +'%Y-%m-%d')" && git push origin main)
+          # Commit and push if there are changes
+          if ! git diff --quiet HEAD || ! git diff --staged --quiet; then
+            git commit -m "Update: Fetch new article list ($(date +'%Y-%m-%d %H:%M:%S'))"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi

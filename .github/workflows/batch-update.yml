@@ -37,8 +37,8 @@ jobs:
 
       - name: Commit and push if changes exist
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
           # Pull latest changes with rebase
           git pull origin main --rebase
           # Stage changes
