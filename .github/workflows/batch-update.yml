@@ -20,6 +20,11 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 9  # Set timeout to 9 minutes (GitHub Actions max is 360 minutes)
+    env:
+      TRIGGER_TIME: ${{ github.event.schedule }}
+      EVENT_NAME: ${{ github.event_name }}
+      REF_NAME: ${{ github.ref_name }}
+      REPOSITORY: ${{ github.repository }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,6 +38,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Debug workflow trigger
+        run: |
+          echo "Trigger time: $TRIGGER_TIME"
+          echo "Event name: $EVENT_NAME"
+          echo "Branch: $REF_NAME"
+          echo "Repository: $REPOSITORY"
+          echo "Current time: $(date)"
 
       - name: Process batch of articles
         env:
