@@ -51,13 +51,13 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          # Pull latest changes with rebase
-          git pull origin main --rebase
           # Stage changes
           git add data/ public/
           # Commit and push if there are changes
           if ! git diff --quiet HEAD || ! git diff --staged --quiet; then
             git commit -m "Update: Daily article refresh ($(date +'%Y-%m-%d %H:%M:%S'))"
+            # Pull latest changes with rebase right before push
+            git pull origin main --rebase
             git push origin main
           else
             echo "No changes to commit"
