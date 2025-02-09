@@ -122,6 +122,7 @@ class SiteGenerator {
                         // Remove visibility and opacity styles that may hide content
                         jsContent.css('visibility', 'visible');
                         jsContent.css('opacity', '1');
+                        jsContent.find('*').css('visibility', 'visible').css('opacity', '1');
                         
                         if (jsContent.text().trim().length > 100) {
                             console.log('Found content via #js_content');
@@ -132,36 +133,60 @@ class SiteGenerator {
                     // Method 2: Rich media content
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const richMedia = $('.rich_media_content');
-                        if (richMedia.length > 0 && richMedia.text().trim().length > 100) {
-                            console.log('Found content via .rich_media_content');
-                            mainContent = richMedia;
+                        if (richMedia.length > 0) {
+                            richMedia.css('visibility', 'visible');
+                            richMedia.css('opacity', '1');
+                            richMedia.find('*').css('visibility', 'visible').css('opacity', '1');
+                            
+                            if (richMedia.text().trim().length > 100) {
+                                console.log('Found content via .rich_media_content');
+                                mainContent = richMedia;
+                            }
                         }
                     }
                     
                     // Method 3: Article content
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const articleContent = $('#js_article');
-                        if (articleContent.length > 0 && articleContent.text().trim().length > 100) {
-                            console.log('Found content via #js_article');
-                            mainContent = articleContent;
+                        if (articleContent.length > 0) {
+                            articleContent.css('visibility', 'visible');
+                            articleContent.css('opacity', '1');
+                            articleContent.find('*').css('visibility', 'visible').css('opacity', '1');
+                            
+                            if (articleContent.text().trim().length > 100) {
+                                console.log('Found content via #js_article');
+                                mainContent = articleContent;
+                            }
                         }
                     }
 
                     // Method 4: Rich media area
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const richMediaArea = $('#js_rich_media_area');
-                        if (richMediaArea.length > 0 && richMediaArea.text().trim().length > 100) {
-                            console.log('Found content via #js_rich_media_area');
-                            mainContent = richMediaArea;
+                        if (richMediaArea.length > 0) {
+                            richMediaArea.css('visibility', 'visible');
+                            richMediaArea.css('opacity', '1');
+                            richMediaArea.find('*').css('visibility', 'visible').css('opacity', '1');
+                            
+                            if (richMediaArea.text().trim().length > 100) {
+                                console.log('Found content via #js_rich_media_area');
+                                mainContent = richMediaArea;
+                            }
                         }
                     }
 
                     // Method 5: Post area
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const postArea = $('#post_area');
-                        if (postArea.length > 0 && postArea.text().trim().length > 100) {
-                            console.log('Found content via #post_area');
-                            mainContent = postArea;
+                        if (postArea.length > 0) {
+                            postArea.css('visibility', 'visible');
+                            postArea.css('opacity', '1');
+                            postArea.find('*').css('visibility', 'visible').css('opacity', '1');
+                            
+                            if (postArea.text().trim().length > 100) {
+                                console.log('Found content via #post_area');
+                                mainContent = postArea;
+                            }
                         }
                     }
 
@@ -169,6 +194,10 @@ class SiteGenerator {
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         $('[class*="content"], [class*="article"], [class*="post"]').each(function() {
                             const $div = $(this);
+                            $div.css('visibility', 'visible');
+                            $div.css('opacity', '1');
+                            $div.find('*').css('visibility', 'visible').css('opacity', '1');
+                            
                             const text = $div.text().trim();
                             if (text.length > 100 && !mainContent) {
                                 console.log(`Found content via class match: ${$div.attr('class')}`);
@@ -186,6 +215,10 @@ class SiteGenerator {
                             // Skip divs that are likely headers or footers
                             if ($div.closest('header, footer').length > 0) return;
                             if ($div.find('header, footer').length > 0) return;
+                            
+                            $div.css('visibility', 'visible');
+                            $div.css('opacity', '1');
+                            $div.find('*').css('visibility', 'visible').css('opacity', '1');
                             
                             const text = $div.text().trim();
                             // Look for paragraphs or meaningful content

@@ -143,4 +143,23 @@ class BatchProcessor {
 
 // Main execution
 const processor = new BatchProcessor();
-processor.processBatch().catch(console.error);
+
+// Check if an article ID was provided as command line argument
+const targetArticleId = process.argv[2];
+
+if (targetArticleId) {
+    // Process single article
+    processor.initialize().then(async () => {
+        const archive = await fs.readJson(processor.archiveFile);
+        const article = archive.articles.find(a => a.id === targetArticleId);
+        if (!article) {
+            console.error(`Article with ID ${targetArticleId} not found`);
+            return;
+        }
+        await processor.generator.initialize();
+        await processor.generator.generateArticlePage(article);
+    }).catch(console.error);
+} else {
+    // Normal batch processing
+    processor.processBatch().catch(console.error);
+}
