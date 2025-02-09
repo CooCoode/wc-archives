@@ -48,7 +48,7 @@ class SiteGenerator {
 
             // Handle data-src URLs
             if (cleanUrl.startsWith('data:')) {
-                console.log('Skipping data URL');
+
                 return imageUrl;
             }
 
@@ -61,11 +61,11 @@ class SiteGenerator {
                     throw new Error('Not a URL');
                 }
             } catch (e) {
-                console.error(`Not a valid URL: ${cleanUrl}`);
+
                 return imageUrl;
             }
 
-            console.log(`Downloading image from: ${cleanUrl}`);
+
             const response = await fetch(cleanUrl);
             
             if (!response.ok) {
@@ -81,7 +81,7 @@ class SiteGenerator {
             
             return `images/${filename}`;
         } catch (error) {
-            console.error(`Error downloading image: ${error.message}`);
+
             return imageUrl; // Fallback to original URL if download fails
         }
     }
@@ -97,21 +97,11 @@ class SiteGenerator {
             
             if (article.link) {
                 try {
-                    console.log(`Fetching content from: ${article.link}`);
+
                     const response = await fetch(article.link);
                     const html = await response.text();
-                    console.log(`Received HTML response, length: ${html.length}`);
-                    
                     // Parse the HTML content
                     const $ = cheerio.load(html);
-                    
-                    // Extract the main content
-                    console.log('Looking for content div...');
-                    const contentDiv = $('#js_content');
-                    console.log('Content div found:', contentDiv.length > 0);
-                    
-                    // For debugging, let's see what we got
-                    console.log('First 500 chars of HTML:', html.substring(0, 500));
                     
                     // Try to find the content in different ways
                     let mainContent = null;
@@ -125,7 +115,7 @@ class SiteGenerator {
                         jsContent.find('*').css('visibility', 'visible').css('opacity', '1');
                         
                         if (jsContent.text().trim().length > 100) {
-                            console.log('Found content via #js_content');
+
                             mainContent = jsContent;
                         }
                     }
@@ -139,7 +129,7 @@ class SiteGenerator {
                             richMedia.find('*').css('visibility', 'visible').css('opacity', '1');
                             
                             if (richMedia.text().trim().length > 100) {
-                                console.log('Found content via .rich_media_content');
+    
                                 mainContent = richMedia;
                             }
                         }
@@ -154,7 +144,7 @@ class SiteGenerator {
                             articleContent.find('*').css('visibility', 'visible').css('opacity', '1');
                             
                             if (articleContent.text().trim().length > 100) {
-                                console.log('Found content via #js_article');
+    
                                 mainContent = articleContent;
                             }
                         }
@@ -169,7 +159,7 @@ class SiteGenerator {
                             richMediaArea.find('*').css('visibility', 'visible').css('opacity', '1');
                             
                             if (richMediaArea.text().trim().length > 100) {
-                                console.log('Found content via #js_rich_media_area');
+    
                                 mainContent = richMediaArea;
                             }
                         }
@@ -184,7 +174,7 @@ class SiteGenerator {
                             postArea.find('*').css('visibility', 'visible').css('opacity', '1');
                             
                             if (postArea.text().trim().length > 100) {
-                                console.log('Found content via #post_area');
+    
                                 mainContent = postArea;
                             }
                         }
@@ -200,7 +190,7 @@ class SiteGenerator {
                             
                             const text = $div.text().trim();
                             if (text.length > 100 && !mainContent) {
-                                console.log(`Found content via class match: ${$div.attr('class')}`);
+    
                                 mainContent = $div;
                             }
                         });
@@ -229,32 +219,19 @@ class SiteGenerator {
                             }
                         });
                         if (bestDiv && maxLength > 100) {
-                            console.log(`Found content via largest meaningful block (${maxLength} chars)`);
+
                             mainContent = bestDiv;
                         }
                     }
 
-                    // Debug logging for content extraction
-                    console.log('Content extraction results:');
-                    console.log(`- js_content elements: ${$('#js_content').length}`);
-                    console.log(`- rich_media_content elements: ${$('.rich_media_content').length}`);
-                    console.log(`- js_article elements: ${$('#js_article').length}`);
-                    console.log(`- js_rich_media_area elements: ${$('#js_rich_media_area').length}`);
-                    console.log(`- post_area elements: ${$('#post_area').length}`);
-                    console.log(`- Total divs: ${$('div').length}`);
-                    console.log(`- Divs with content/article/post in class: ${$('[class*="content"], [class*="article"], [class*="post"]').length}`);
-
                     // Log content status
                     if (mainContent) {
                         const contentLength = mainContent.text().trim().length;
-                        console.log(`Found content with length: ${contentLength}`);
                         if (contentLength < 100) {
-                            console.log('Content too short, discarding');
                             mainContent = null;
                             contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
                         }
                     } else {
-                        console.log('No suitable content found');
                         contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
                     }
 
@@ -262,7 +239,7 @@ class SiteGenerator {
                         // Process images and clean up content
                         const articleImages = [];
                         const imgElements = mainContent.find('img');
-                        console.log(`Found ${imgElements.length} images in content`);
+
                         
                         for (let i = 0; i < imgElements.length; i++) {
                             const img = imgElements.eq(i);
@@ -290,7 +267,7 @@ class SiteGenerator {
                                     attrsToRemove.forEach(attr => img.removeAttr(attr));
                                     articleImages.push(filename);
                                 } catch (err) {
-                                    console.error(`Error downloading image ${dataSrc}:`, err.message);
+
                                 }
                             }
                         }
@@ -322,7 +299,7 @@ class SiteGenerator {
                     if (mainContent && mainContent.length > 0) {
                         // Process and download images
                         const imgElements = mainContent.find('img');
-                        console.log(`Found ${imgElements.length} images in content`);
+
                         
                         for (let i = 0; i < imgElements.length; i++) {
                             const img = imgElements.eq(i);
@@ -335,7 +312,7 @@ class SiteGenerator {
                                     img.attr('src', `images/${filename}`);
                                     articleImages.push(filename);
                                 } catch (err) {
-                                    console.error(`Error downloading image ${dataSrc}:`, err.message);
+
                                 }
                             }
                         }
@@ -383,13 +360,13 @@ class SiteGenerator {
                         // Get the content
                         articleContent = tempDoc.html();
                         
-                        console.log('Found content length:', articleContent ? articleContent.length : 0);
+
                         contentStatus = '';
                     } else {
                         contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
                     }
                 } catch (error) {
-                    console.error(`Error fetching article ${article.id}:`, error.message);
+
                     contentStatus = '无法访问文章。请点击下方链接访问原文。';
                 }
             }
@@ -397,7 +374,7 @@ class SiteGenerator {
             // Download cover image if present
             let localCover = '';
             if (article.cover) {
-                console.log(`Downloading cover image for article ${article.id}...`);
+
                 const filename = `cover${path.extname(article.cover) || '.jpg'}`;
                 localCover = await this.downloadImage(article.cover, article.id, filename);
             }
@@ -464,15 +441,15 @@ class SiteGenerator {
     }
 
     async generate() {
-        console.log('Starting site generation...');
+
         await this.initialize();
 
         // Load archive data
         const archive = await fs.readJson(path.join(this.dataDir, 'archive.json'));
-        console.log(`Found ${archive.articles.length} articles`);
+
 
         // Generate all article pages
-        console.log(`Processing all ${archive.articles.length} articles...`);
+
         
         for (const article of archive.articles) {
             try {
@@ -480,20 +457,20 @@ class SiteGenerator {
                 const articleFilePath = path.join(this.articlesDir, article.fileName);
                 const articleData = await fs.readJson(articleFilePath);
                 
-                console.log(`\nProcessing article: ${articleData.title}`);
-                console.log(`Article link: ${articleData.link}`);
+
+
                 await this.generateArticlePage(articleData);
-                console.log(`Successfully generated page for article: ${articleData.title}`);
+
             } catch (error) {
-                console.error(`Error generating page for article ${article.id}:`, error);
+
             }
         }
 
         // Generate index page
         await this.generateIndexPage(archive);
-        console.log('Generated index page');
 
-        console.log('Site generation complete!');
+
+
     }
 }
 

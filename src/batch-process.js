@@ -92,7 +92,7 @@ class BatchProcessor {
             const endIndex = Math.min(startIndex + this.batchSize, progress.totalArticles);
             const batch = articles.slice(startIndex, endIndex);
 
-            console.log(`Processing batch from index ${startIndex} to ${endIndex}`);
+            console.log(`Processing articles ${startIndex + 1} to ${endIndex} of ${progress.totalArticles}...`);
 
             // Process each article in the batch
             for (const article of batch) {
