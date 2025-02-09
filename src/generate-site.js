@@ -213,9 +213,32 @@ class SiteGenerator {
     }
 
     async generateIndexPage(archive) {
-        const template = await this.loadTemplate('index');
-        const html = Mustache.render(template, archive);
-        await fs.writeFile(path.join(this.outputDir, 'index.html'), html);
+        try {
+            await this.initialize(); // Ensure output directory exists
+            const template = await this.loadTemplate('index');
+            
+            // Sort articles by date (newest first)
+            const sortedArchive = {
+                ...archive,
+                articles: [...archive.articles].sort((a, b) => 
+                    new Date(b.publishAt || b.createAt) - new Date(a.publishAt || a.createAt)
+                )
+            };
+
+            // Add formatted dates and URLs for the template
+            sortedArchive.articles = sortedArchive.articles.map(article => ({
+                ...article,
+                formattedDate: new Date(article.publishAt || article.createAt).toLocaleDateString('zh-CN'),
+                url: `articles/${article.id}/index.html`
+            }));
+
+            const html = Mustache.render(template, sortedArchive);
+            await fs.writeFile(path.join(this.outputDir, 'index.html'), html);
+            console.log(`Generated index.html with ${sortedArchive.articles.length} articles`);
+        } catch (error) {
+            console.error('Error generating index page:', error);
+            throw error;
+        }
     }
 
     async generate() {

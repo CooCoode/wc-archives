@@ -116,10 +116,15 @@ class BatchProcessor {
                 }
             }
 
-            // Generate index page after each batch
+            // Generate index page after each batch with processed articles
             try {
-                await this.generator.generateIndexPage(archive);
-                console.log('Generated index page');
+                // Create a new archive object with only processed articles
+                const processedArchive = {
+                    ...archive,
+                    articles: articles.slice(0, progress.processedCount)
+                };
+                await this.generator.generateIndexPage(processedArchive);
+                console.log(`Generated index page with ${progress.processedCount} articles`);
             } catch (error) {
                 console.error('Error generating index page:', error);
             }
