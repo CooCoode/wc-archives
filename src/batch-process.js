@@ -10,7 +10,7 @@ class BatchProcessor {
     constructor() {
         this.progressFile = path.join(__dirname, '..', 'data', 'progress.json');
         this.archiveFile = path.join(__dirname, '..', 'data', 'archive.json');
-        this.batchSize = 10; // Process 10 articles per run
+        this.batchSize = 30; // Process 10 articles per run
         this.maxRetries = 3; // Maximum number of retries per article
         this.retryDelay = 5000; // 5 seconds between retries
         this.maxRunTime = 8 * 60 * 1000; // 8 minutes maximum run time
