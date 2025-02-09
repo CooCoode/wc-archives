@@ -116,10 +116,12 @@ class BatchProcessor {
                 }
             }
 
-            // Generate index page if we've processed all articles
-            if (progress.remainingCount === 0) {
-                await this.generator.generateIndexPage(articles);
+            // Generate index page after each batch
+            try {
+                await this.generator.generateIndexPage(archive);
                 console.log('Generated index page');
+            } catch (error) {
+                console.error('Error generating index page:', error);
             }
 
             console.log(`Batch complete. Processed ${progress.processedCount}/${progress.totalArticles} articles`);
