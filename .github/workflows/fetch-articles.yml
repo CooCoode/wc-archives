@@ -1,9 +1,7 @@
 name: Fetch Initial Article List
 
 on:
-  workflow_dispatch:  # Allow manual triggering
-  schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight UTC (8 AM Beijing Time)
+  workflow_dispatch:  # Manual trigger only
 
 # Ensure only one workflow runs at a time
 concurrency:
