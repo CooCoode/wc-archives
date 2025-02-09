@@ -430,7 +430,8 @@ class SiteGenerator {
             sortedArchive.articles = sortedArchive.articles.map(article => ({
                 ...article,
                 formattedDate: new Date(article.publishAt || article.createAt).toLocaleDateString('zh-CN'),
-                url: `articles/${article.id}/index.html`
+                url: `articles/${article.id}/index.html`,
+                author: article.author || 'SeeDAO'
             }));
 
             const html = Mustache.render(template, sortedArchive);
