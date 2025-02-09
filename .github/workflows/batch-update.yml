@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 9  # Set timeout to 9 minutes (GitHub Actions max is 360 minutes)
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -39,5 +39,14 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update WeChat articles batch $(date +'%Y-%m-%d %H:%M:%S')" && git push)
+          # Pull latest changes with rebase
+          git pull origin main --rebase
+          # Stage changes
+          git add public/ data/
+          # Commit and push if there are changes
+          if ! git diff --quiet HEAD || ! git diff --staged --quiet; then
+            git commit -m "Batch update: Generate pages for articles ($(date +'%Y-%m-%d %H:%M:%S'))"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
