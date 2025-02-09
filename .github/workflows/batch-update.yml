@@ -1,8 +1,8 @@
 name: Batch Update WeChat Articles
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'  # Run every 5 minutes (UTC time)
+  # schedule:
+  #   - cron: '*/5 * * * *'  # Run every 5 minutes (UTC time)
   workflow_dispatch:  # Allow manual triggering
 
 # Sets permissions of the GITHUB_TOKEN
