@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1a1a"/>
+  
+  <!-- SeeDAO Text -->
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">
+    SeeDAO
+  </text>
+  
+  <!-- WeChat Archive Text -->
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="48" fill="#888888" text-anchor="middle">
+    WeChat Archive
+  </text>
+  
+  <!-- Decorative Line -->
+  <line x1="400" y1="400" x2="800" y2="400" stroke="#4a4a4a" stroke-width="4"/>
+</svg>
