@@ -437,14 +437,14 @@ class SiteGenerator {
             const sortedArchive = {
                 ...archive,
                 articles: [...archive.articles].sort((a, b) => 
-                    new Date(b.publishAt || b.createAt) - new Date(a.publishAt || a.createAt)
+                    new Date(b.publishTime || b.createAt) - new Date(a.publishTime || a.createAt)
                 )
             };
 
             // Add formatted dates and URLs for the template
             sortedArchive.articles = sortedArchive.articles.map(article => ({
                 ...article,
-                formattedDate: new Date(article.publishAt || article.createAt).toLocaleDateString('zh-CN'),
+                formattedDate: new Date(article.publishTime || article.createAt).toLocaleDateString('zh-CN'),
                 url: `articles/${article.id}/index.html`,
                 author: article.author || 'SeeDAO'
             }));
