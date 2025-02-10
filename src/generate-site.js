@@ -413,6 +413,21 @@ class SiteGenerator {
         }
     }
 
+    escape(text) {
+        if (!text) return '';
+        return text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&apos;');
+    }
+
+    async generateSitemap(articles) {
+        const { generateSitemap } = await import('./generate-sitemap.js');
+        await generateSitemap(articles);
+    }
+
     async generateIndexPage(archive) {
         try {
             await this.initialize(); // Ensure output directory exists
@@ -454,24 +469,44 @@ class SiteGenerator {
         // Generate all article pages
         console.log(`Processing all ${archive.articles.length} articles...`);
         
+        const validArticles = [];
         for (const article of archive.articles) {
             try {
                 // First read the actual article data from its JSON file
-                const articleFilePath = path.join(this.articlesDir, article.fileName);
+                const articleFilePath = path.join(this.articlesDir, article.id, 'article.json');
+                if (!await fs.pathExists(articleFilePath)) {
+                    console.warn(`Skipping article ${article.id}: File not found at ${articleFilePath}`);
+                    continue;
+                }
+                
                 const articleData = await fs.readJson(articleFilePath);
+                if (!articleData) {
+                    console.warn(`Skipping article ${article.id}: Invalid JSON data`);
+                    continue;
+                }
                 
                 console.log(`\nProcessing article: ${articleData.title}`);
                 console.log(`Article link: ${articleData.link}`);
                 await this.generateArticlePage(articleData);
                 console.log(`Successfully generated page for article: ${articleData.title}`);
+                validArticles.push({
+                    ...article,
+                    title: articleData.title,
+                    cover: articleData.cover
+                });
             } catch (error) {
                 console.error(`Error generating page for article ${article.id}:`, error);
             }
         }
 
-        // Generate index page
-        await this.generateIndexPage(archive);
+        // Generate index page with only valid articles
+        const validArchive = { ...archive, articles: validArticles };
+        await this.generateIndexPage(validArchive);
         console.log('Generated index page');
+
+        // Generate sitemap with only valid articles
+        await this.generateSitemap(validArticles);
+        console.log('Generated sitemap');
 
         console.log('Site generation complete!');
     }

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Sitemap: https://wc-archives.netlify.app/sitemap.xml
+
+# Allow Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Allow Baiduspider
+User-agent: Baiduspider
+Allow: /
