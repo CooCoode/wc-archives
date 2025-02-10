@@ -98,10 +98,24 @@ class SiteGenerator {
             if (article.link) {
                 try {
                     console.log(`Fetching content from: ${article.link}`);
-                    const response = await fetch(article.link);
+                    const response = await fetch(article.link, {
+                        headers: {
+                            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                            'Accept-Language': 'en-US,en;q=0.5'
+                        }
+                    });
                     const html = await response.text();
+                    console.log('Received HTML length:', html.length);
+                    
                     // Parse the HTML content
-                    const $ = cheerio.load(html);
+                    const $ = cheerio.load(html, {
+                        decodeEntities: false,
+                        xmlMode: false
+                    });
+                    
+                    // Log page title for debugging
+                    console.log('Page title:', $('title').text());
                     
                     // Try to find the content in different ways
                     let mainContent = null;
@@ -109,14 +123,39 @@ class SiteGenerator {
                     // Method 1: Standard WeChat content div
                     const jsContent = $('#js_content');
                     if (jsContent.length > 0) {
+                        console.log('Found js_content');
                         // Remove visibility and opacity styles that may hide content
                         jsContent.css('visibility', 'visible');
                         jsContent.css('opacity', '1');
                         jsContent.find('*').css('visibility', 'visible').css('opacity', '1');
                         
-                        if (jsContent.text().trim().length > 100) {
-
+                        // Remove any script tags and unwanted elements
+                        jsContent.find('script, style, link, iframe').remove();
+                        
+                        // Process images
+                        jsContent.find('img').each(function() {
+                            const $img = $(this);
+                            const dataSrc = $img.attr('data-src');
+                            if (dataSrc) {
+                                $img.attr('src', dataSrc);
+                            }
+                        });
+                        
+                        // Remove empty elements
+                        jsContent.find('*').each(function() {
+                            const $el = $(this);
+                            if ($el.text().trim() === '' && !$el.find('img').length) {
+                                $el.remove();
+                            }
+                        });
+                        
+                        const text = jsContent.text().trim();
+                        console.log(`js_content text length: ${text.length}`);
+                        console.log('Sample content:', text.substring(0, 100));
+                        
+                        if (text.length > 100) {
                             mainContent = jsContent;
+                            console.log('Using js_content');
                         }
                     }
                     
@@ -124,13 +163,23 @@ class SiteGenerator {
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const richMedia = $('.rich_media_content');
                         if (richMedia.length > 0) {
+                            console.log('Found rich_media_content');
                             richMedia.css('visibility', 'visible');
                             richMedia.css('opacity', '1');
                             richMedia.find('*').css('visibility', 'visible').css('opacity', '1');
                             
-                            if (richMedia.text().trim().length > 100) {
-    
+                            // Remove any script tags
+                            richMedia.find('script').remove();
+                            richMedia.find('style').remove();
+                            richMedia.find('link').remove();
+                            richMedia.find('iframe').remove();
+                            
+                            const text = richMedia.text().trim();
+                            console.log(`rich_media_content text length: ${text.length}`);
+                            
+                            if (text.length > 100) {
                                 mainContent = richMedia;
+                                console.log('Using rich_media_content');
                             }
                         }
                     }
@@ -139,13 +188,23 @@ class SiteGenerator {
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const articleContent = $('#js_article');
                         if (articleContent.length > 0) {
+                            console.log('Found js_article');
                             articleContent.css('visibility', 'visible');
                             articleContent.css('opacity', '1');
                             articleContent.find('*').css('visibility', 'visible').css('opacity', '1');
                             
-                            if (articleContent.text().trim().length > 100) {
-    
+                            // Remove any script tags
+                            articleContent.find('script').remove();
+                            articleContent.find('style').remove();
+                            articleContent.find('link').remove();
+                            articleContent.find('iframe').remove();
+                            
+                            const text = articleContent.text().trim();
+                            console.log(`js_article text length: ${text.length}`);
+                            
+                            if (text.length > 100) {
                                 mainContent = articleContent;
+                                console.log('Using js_article');
                             }
                         }
                     }
@@ -154,13 +213,23 @@ class SiteGenerator {
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const richMediaArea = $('#js_rich_media_area');
                         if (richMediaArea.length > 0) {
+                            console.log('Found js_rich_media_area');
                             richMediaArea.css('visibility', 'visible');
                             richMediaArea.css('opacity', '1');
                             richMediaArea.find('*').css('visibility', 'visible').css('opacity', '1');
                             
-                            if (richMediaArea.text().trim().length > 100) {
-    
+                            // Remove any script tags
+                            richMediaArea.find('script').remove();
+                            richMediaArea.find('style').remove();
+                            richMediaArea.find('link').remove();
+                            richMediaArea.find('iframe').remove();
+                            
+                            const text = richMediaArea.text().trim();
+                            console.log(`js_rich_media_area text length: ${text.length}`);
+                            
+                            if (text.length > 100) {
                                 mainContent = richMediaArea;
+                                console.log('Using js_rich_media_area');
                             }
                         }
                     }
@@ -169,13 +238,23 @@ class SiteGenerator {
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         const postArea = $('#post_area');
                         if (postArea.length > 0) {
+                            console.log('Found post_area');
                             postArea.css('visibility', 'visible');
                             postArea.css('opacity', '1');
                             postArea.find('*').css('visibility', 'visible').css('opacity', '1');
                             
-                            if (postArea.text().trim().length > 100) {
-    
+                            // Remove any script tags
+                            postArea.find('script').remove();
+                            postArea.find('style').remove();
+                            postArea.find('link').remove();
+                            postArea.find('iframe').remove();
+                            
+                            const text = postArea.text().trim();
+                            console.log(`post_area text length: ${text.length}`);
+                            
+                            if (text.length > 100) {
                                 mainContent = postArea;
+                                console.log('Using post_area');
                             }
                         }
                     }
@@ -184,14 +263,26 @@ class SiteGenerator {
                     if (!mainContent || mainContent.text().trim().length < 100) {
                         $('[class*="content"], [class*="article"], [class*="post"]').each(function() {
                             const $div = $(this);
+                            // Skip divs that are likely headers or footers
+                            if ($div.closest('header, footer').length > 0) return;
+                            if ($div.find('header, footer').length > 0) return;
+                            
                             $div.css('visibility', 'visible');
                             $div.css('opacity', '1');
                             $div.find('*').css('visibility', 'visible').css('opacity', '1');
                             
+                            // Remove any script tags
+                            $div.find('script').remove();
+                            $div.find('style').remove();
+                            $div.find('link').remove();
+                            $div.find('iframe').remove();
+                            
                             const text = $div.text().trim();
+                            console.log(`Found content div with length ${text.length}`);
+                            
                             if (text.length > 100 && !mainContent) {
-    
                                 mainContent = $div;
+                                console.log('Using content div');
                             }
                         });
                     }
@@ -210,31 +301,64 @@ class SiteGenerator {
                             $div.css('opacity', '1');
                             $div.find('*').css('visibility', 'visible').css('opacity', '1');
                             
+                            // Remove any script tags
+                            $div.find('script').remove();
+                            $div.find('style').remove();
+                            $div.find('link').remove();
+                            $div.find('iframe').remove();
+                            
                             const text = $div.text().trim();
                             // Look for paragraphs or meaningful content
                             if (text.length > maxLength && 
                                 ($div.find('p').length > 0 || text.includes('。') || text.includes('，'))) {
                                 maxLength = text.length;
                                 bestDiv = $div;
+                                console.log(`Found potential content div with length ${text.length}`);
                             }
                         });
                         if (bestDiv && maxLength > 100) {
-
                             mainContent = bestDiv;
+                            console.log('Using largest text block');
                         }
                     }
 
                     // Log content status
                     if (mainContent) {
                         const contentLength = mainContent.text().trim().length;
+                        console.log(`Content length: ${contentLength}`);
+                        
                         if (contentLength < 100) {
                             console.log('Content too short, discarding');
                             mainContent = null;
                             contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
+                            articleContent = null;
+                        } else {
+                            // Process the content
+                            mainContent.find('script').remove();
+                            mainContent.find('style').remove();
+                            mainContent.find('link').remove();
+                            mainContent.find('iframe').remove();
+                            
+                            // Remove empty elements
+                            mainContent.find('*').each(function() {
+                                const $el = $(this);
+                                if ($el.text().trim() === '' && $el.find('img').length === 0) {
+                                    $el.remove();
+                                }
+                            });
+                            
+                            // Add spacing between paragraphs
+                            mainContent.find('p').addClass('mb-4');
+                            
+                            // Get the HTML content
+                            articleContent = mainContent.html();
+                            console.log('Content processed successfully');
+                            contentStatus = '';
                         }
                     } else {
                         console.log('No suitable content found');
                         contentStatus = '无法提取文章内容。请点击下方链接访问原文。';
+                        articleContent = null;
                     }
 
                     if (mainContent) {
