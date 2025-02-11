@@ -32,8 +32,8 @@ jobs:
         id: check_status
         run: |
           if [ -f "data/progress.json" ]; then
-            remaining=$(node -p "JSON.parse(require('fs').readFileSync('data/progress.json')).remainingCount || 1")
-            if [ "$remaining" -eq "0" ]; then
+            remaining=$(node -p "JSON.parse(require('fs').readFileSync('data/progress.json')).remainingCount")
+            if [ "$remaining" = "0" ] || [ "$remaining" = "undefined" ]; then
               echo "Historical articles fully processed, proceeding with daily update"
               echo "can_proceed=true" >> $GITHUB_OUTPUT
             else
