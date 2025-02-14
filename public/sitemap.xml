@@ -5,11 +5,79 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.netlify.app/</loc>
-        <lastmod>2025-02-14T02:07:58.721Z</lastmod>
+        <lastmod>2025-02-14T11:03:22.066Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458701_1/index.html</loc>
+        <lastmod>2025-02-14T04:23:34.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458701_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458701_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-14T04:23:34.000Z</news:publication_date>
+            <news:title>为你写歌｜尝试给哪吒的妈妈写了一首歌</news:title>
+            <news:keywords>为你写歌,社区生活,生活方式</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458685_1/index.html</loc>
+        <lastmod>2025-02-13T08:50:40.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458685_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458685_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-13T08:50:40.000Z</news:publication_date>
+            <news:title>社区大会：新人如何做好投研分析 &amp; PI 的前世今生</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458685_2/index.html</loc>
+        <lastmod>2025-02-13T08:50:40.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458685_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458685_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-13T08:50:40.000Z</news:publication_date>
+            <news:title>新人日记: 小狐狸的区块链星球奇遇记</news:title>
+            <news:keywords>区块链,DAO,Web3,社区,新手营</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458676_1/index.html</loc>
+        <lastmod>2025-02-12T01:00:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458676_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458676_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-12T01:00:00.000Z</news:publication_date>
+            <news:title>如何用DeepSeek做独立产品开发？听实践者说</news:title>
+            <news:keywords>区块链</news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.netlify.app/articles/2648458673_1/index.html</loc>
