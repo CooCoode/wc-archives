@@ -29,13 +29,13 @@ The repository uses several GitHub Actions workflows:
 # Install dependencies
 npm install
 
-# Run article fetch
+# Run article fetch to fetch all articles
 npm run fetch
 
 # Process articles
 npm run process
 
-# Run daily update
+# Run daily update to fetch new articles
 npm run update
 ```
 

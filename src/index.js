@@ -7,6 +7,14 @@ import winston from 'winston';
 import dotenv from 'dotenv';
 import * as cheerio from 'cheerio';
 
+// Custom error for invalid session
+class InvalidSessionError extends Error {
+    constructor(message = 'API error: invalid session') {
+        super(message);
+        this.name = 'InvalidSessionError';
+    }
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -113,11 +121,20 @@ class WeChatScraper {
             );
 
             if (!response.data || response.data.base_resp?.ret !== 0) {
-                throw new Error(`API error: ${response.data?.base_resp?.err_msg || 'Unknown error'}`);
+                const errorMsg = response.data?.base_resp?.err_msg || 'Unknown error';
+                if (errorMsg.includes('invalid session')) {
+                    throw new InvalidSessionError();
+                }
+                throw new Error(`API error: ${errorMsg}`);
             }
 
             return response.data;
         } catch (error) {
+            if (error instanceof InvalidSessionError) {
+                logger.error('Session is invalid - authentication required');
+                throw error; // Propagate the invalid session error
+            }
+            
             logger.error('Error fetching articles:', error.message);
             logger.error('Full error:', error);
             throw error;
@@ -181,6 +198,7 @@ class WeChatScraper {
     async updateArchive(articles) {
         const archive = await fs.readJson(this.archiveFile);
         const existingIds = new Set(archive.articles.map(a => a.id));
+        let newArticlesCount = 0;
 
         for (const article of articles) {
             if (!existingIds.has(article.id)) {
@@ -195,17 +213,100 @@ class WeChatScraper {
                     cover: article.cover,
                     digest: article.digest
                 });
+                newArticlesCount++;
             }
         }
 
-        archive.lastUpdate = dayjs().format('YYYY-MM-DD HH:mm:ss');
-        archive.articles.sort((a, b) => dayjs(b.publishTime).unix() - dayjs(a.publishTime).unix());
-        
-        await fs.writeJson(this.archiveFile, archive, { spaces: 2 });
-        return archive;
+        if (newArticlesCount > 0) {
+            archive.lastUpdate = dayjs().format('YYYY-MM-DD HH:mm:ss');
+            archive.articles.sort((a, b) => dayjs(b.publishTime).unix() - dayjs(a.publishTime).unix());
+            await fs.writeJson(this.archiveFile, archive, { spaces: 2 });
+        }
+
+        return { archive, newArticlesCount };
     }
 
-    async run() {
+    async fetchNewArticles() {
+        await this.initialize();
+        logger.info('Starting to fetch new WeChat articles...');
+
+        try {
+            // Read archive to get existing IDs
+            const archive = await fs.readJson(this.archiveFile);
+            const existingIds = new Set(archive.articles.map(a => a.id));
+            
+            // Fetch first batch
+            const firstBatch = await this.fetchArticles(0, 20);
+            const publishPage = JSON.parse(firstBatch.publish_page);
+            const totalCount = publishPage.total_count;
+            let newArticlesFound = 0;
+            let shouldContinue = true;
+
+            // Process first batch
+            for (const item of publishPage.publish_list) {
+                const articles = this.parseArticleInfo(item.publish_info);
+                // Check if any article in this batch already exists
+                if (articles.some(article => existingIds.has(article.id))) {
+                    logger.info('Found existing article, stopping fetch since articles are time-ordered');
+                    shouldContinue = false;
+                    break;
+                }
+                const { newArticlesCount } = await this.updateArchive(articles);
+                newArticlesFound += newArticlesCount;
+            }
+
+            // If all articles in first batch were new and there are more batches
+            if (shouldContinue && newArticlesFound > 0) {
+                const batchSize = 20;
+                const totalBatches = Math.ceil(totalCount / batchSize);
+                logger.info(`Found ${newArticlesFound} new articles, checking remaining batches...`);
+
+                // Fetch remaining batches
+                for (let batch = 1; batch < totalBatches; batch++) {
+                    const begin = batch * batchSize;
+                    logger.info(`Checking batch ${batch + 1}/${totalBatches}...`);
+                    
+                    try {
+                        const data = await this.fetchArticles(begin, batchSize);
+                        const batchPage = JSON.parse(data.publish_page);
+
+                        for (const item of batchPage.publish_list) {
+                            const articles = this.parseArticleInfo(item.publish_info);
+                            // Check if any article in this batch already exists
+                            if (articles.some(article => existingIds.has(article.id))) {
+                                logger.info('Found existing article, stopping fetch since articles are time-ordered');
+                                return newArticlesFound;
+                            }
+                            const { newArticlesCount } = await this.updateArchive(articles);
+                            newArticlesFound += newArticlesCount;
+                        }
+
+                        // Add a small delay between requests
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+                    } catch (error) {
+                        if (error instanceof InvalidSessionError) {
+                            logger.error('Invalid session detected - exiting process');
+                            process.exit(1);
+                        }
+                        logger.error(`Error fetching batch ${batch + 1}:`, error);
+                        break;
+                    }
+                }
+            }
+
+            logger.info(`Fetch completed. Found ${newArticlesFound} new articles.`);
+            return newArticlesFound;
+        } catch (error) {
+            if (error instanceof InvalidSessionError) {
+                logger.error('Invalid session detected - exiting process');
+                process.exit(1);
+            }
+            logger.error('Error during new articles fetch:', error);
+            throw error;
+        }
+    }
+
+    async fetchAllArticles() {
         await this.initialize();
         logger.info('Starting WeChat article fetch...');
 
@@ -244,6 +345,10 @@ class WeChatScraper {
                     // Add a small delay between requests
                     await new Promise(resolve => setTimeout(resolve, 1000));
                 } catch (error) {
+                    if (error instanceof InvalidSessionError) {
+                        logger.error('Invalid session detected - exiting process');
+                        process.exit(1);
+                    }
                     logger.error(`Error fetching batch ${batch + 1}:`, error);
                     // Continue with next batch even if one fails
                     continue;
@@ -254,6 +359,10 @@ class WeChatScraper {
             logger.info(`Successfully archived ${archive.articles.length} articles`);
             logger.info('Article fetch completed successfully');
         } catch (error) {
+            if (error instanceof InvalidSessionError) {
+                logger.error('Invalid session detected - exiting process');
+                process.exit(1);
+            }
             logger.error('Error during article fetch:', error);
             throw error;
         }
@@ -266,7 +375,13 @@ export { WeChatScraper };
 // Only run if this is the main module
 if (import.meta.url === `file://${process.argv[1]}`) {
     const scraper = new WeChatScraper();
-    scraper.run().catch(console.error);
+    const command = process.argv[2] || 'run';
+    
+    if (command === 'new') {
+        scraper.fetchNewArticles().catch(console.error);
+    } else {
+        scraper.fetchAllArticles().catch(console.error);
+    }
 }
 
 export default WeChatScraper;
