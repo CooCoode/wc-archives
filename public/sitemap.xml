@@ -5,11 +5,45 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.netlify.app/</loc>
-        <lastmod>2025-02-14T11:03:22.066Z</lastmod>
+        <lastmod>2025-02-15T02:16:20.539Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458725_1/index.html</loc>
+        <lastmod>2025-02-15T00:58:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458725_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458725_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-15T00:58:00.000Z</news:publication_date>
+            <news:title>共创邀请｜SeeDAO 2025 摄影日历</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458725_2/index.html</loc>
+        <lastmod>2025-02-15T00:58:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458725_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458725_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-15T00:58:00.000Z</news:publication_date>
+            <news:title>SeeDAO支持｜【天与读书会】存在与时间</news:title>
+            <news:keywords>海德格尔</news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.netlify.app/articles/2648458701_1/index.html</loc>
