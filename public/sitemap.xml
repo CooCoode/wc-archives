@@ -5,11 +5,113 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.netlify.app/</loc>
-        <lastmod>2025-02-16T02:46:06.921Z</lastmod>
+        <lastmod>2025-02-22T19:23:57.596Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458773_1/index.html</loc>
+        <lastmod>2025-02-22T00:00:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458773_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458773_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-22T00:00:00.000Z</news:publication_date>
+            <news:title>SeeDAO 第十届市政厅岗位竞选招募令</news:title>
+            <news:keywords>Web3,区块链,DAO,数字城邦,共识大会</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458766_1/index.html</loc>
+        <lastmod>2025-02-20T06:59:18.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458766_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458766_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-20T06:59:18.000Z</news:publication_date>
+            <news:title>社区大会: 第十届节点共识大会议题收集和预热</news:title>
+            <news:keywords>社区生活,社区支持,社区,乡建,DAO</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458764_1/index.html</loc>
+        <lastmod>2025-02-18T02:38:29.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458764_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458764_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-18T02:38:29.000Z</news:publication_date>
+            <news:title>可爱的村子们之成都箭塔村｜DAO与乡村数字化</news:title>
+            <news:keywords>乡建,区块链,DAO,孵化器,箭塔村</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458756_1/index.html</loc>
+        <lastmod>2025-02-17T06:28:59.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458756_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458756_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-17T06:28:59.000Z</news:publication_date>
+            <news:title>Consensus大会｜Web5: 更加去中心化</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458735_1/index.html</loc>
+        <lastmod>2025-02-16T02:36:29.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458735_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458735_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-16T02:36:29.000Z</news:publication_date>
+            <news:title>SeeDAO支持｜【天与读书会】存在与时间</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458735_2/index.html</loc>
+        <lastmod>2025-02-16T02:36:29.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458735_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458735_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-16T02:36:29.000Z</news:publication_date>
+            <news:title>Consensus｜香港音乐节-陈冠希Token of Love抽奖</news:title>
+            <news:keywords>consensus,陈冠希,区块链,Web3,香港</news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.netlify.app/articles/2648458725_1/index.html</loc>
