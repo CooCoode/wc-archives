@@ -5,11 +5,28 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.netlify.app/</loc>
-        <lastmod>2025-02-23T02:31:58.680Z</lastmod>
+        <lastmod>2025-02-24T02:29:19.892Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458787_1/index.html</loc>
+        <lastmod>2025-02-23T05:49:36.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458787_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458787_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-23T05:49:36.000Z</news:publication_date>
+            <news:title>Consensus大会香港见闻｜今晚开放唛</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.netlify.app/articles/2648458773_1/index.html</loc>
