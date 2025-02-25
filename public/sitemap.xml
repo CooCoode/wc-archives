@@ -5,11 +5,28 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.netlify.app/</loc>
-        <lastmod>2025-02-24T02:29:19.892Z</lastmod>
+        <lastmod>2025-02-25T02:45:12.513Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458804_1/index.html</loc>
+        <lastmod>2025-02-24T11:55:02.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458804_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458804_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-24T11:55:02.000Z</news:publication_date>
+            <news:title>SeeDAO第十届节点共识大会即将召开，2天内容抢先看！</news:title>
+            <news:keywords>DAO,Web3,数字城邦,SeeDAO,区块链</news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.netlify.app/articles/2648458787_1/index.html</loc>
