@@ -5,11 +5,130 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.netlify.app/</loc>
-        <lastmod>2025-02-25T02:45:12.513Z</lastmod>
+        <lastmod>2025-03-03T18:27:05.047Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458892_1/index.html</loc>
+        <lastmod>2025-03-03T07:40:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458892_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458892_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-03T07:40:00.000Z</news:publication_date>
+            <news:title>论涌现：为什么 DAO 将崛起？</news:title>
+            <news:keywords>SeeDAO,DAO,涌现,比特币,区块链</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458890_1/index.html</loc>
+        <lastmod>2025-03-01T23:54:08.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458890_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458890_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-01T23:54:08.000Z</news:publication_date>
+            <news:title>第十届节点共识大会Day2：城邦展望｜今天</news:title>
+            <news:keywords>SeeDAO节点共识大会</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458883_1/index.html</loc>
+        <lastmod>2025-03-01T00:30:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458883_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458883_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-01T00:30:00.000Z</news:publication_date>
+            <news:title>第十届节点共识大会Day1：城邦回顾｜今晚</news:title>
+            <news:keywords>SeeDAO节点共识大会</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458870_1/index.html</loc>
+        <lastmod>2025-02-28T08:00:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458870_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458870_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-28T08:00:00.000Z</news:publication_date>
+            <news:title>SeeDAO支持｜Crypto Wars 读书会：密码朋克运动历史</news:title>
+            <news:keywords>密码朋克,区块链,比特币</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458860_1/index.html</loc>
+        <lastmod>2025-02-26T00:30:00.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458860_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458860_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-26T00:30:00.000Z</news:publication_date>
+            <news:title>今天｜S10市政厅公共岗位报名即将截止，当晚七点竞选开始</news:title>
+            <news:keywords>节点大会,市政厅,DAO,SeeDAO,数字城邦</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458844_1/index.html</loc>
+        <lastmod>2025-02-25T10:02:53.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458844_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458844_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-25T10:02:53.000Z</news:publication_date>
+            <news:title>等走到无路可走才发现并无所求｜为你写歌</news:title>
+            <news:keywords>为你写歌,生活方式,虚无主义,存在,区块链</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.netlify.app/articles/2648458844_2/index.html</loc>
+        <lastmod>2025-02-25T10:02:53.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/articles/2648458844_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.netlify.app/articles/2648458844_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-02-25T10:02:53.000Z</news:publication_date>
+            <news:title>奔赴三月，徒步中原｜行走春天</news:title>
+            <news:keywords>徒步,区块链,Web3,生活方式,数字乡建</news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.netlify.app/articles/2648458804_1/index.html</loc>
