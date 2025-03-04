@@ -5,7 +5,7 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.netlify.app/</loc>
-        <lastmod>2025-03-03T18:27:05.047Z</lastmod>
+        <lastmod>2025-03-04T02:31:58.996Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.netlify.app/"/>
