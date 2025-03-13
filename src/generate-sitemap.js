@@ -20,7 +20,7 @@ function escape(text) {
 }
 
 export async function generateSitemap(articles) {
-    const baseUrl = 'https://wc-archives.netlify.app';
+    const baseUrl = 'https://wc-archives.seedao.xyz';
     const formatISODate = (article) => {
         if (article.publishTime) {
             return new Date(article.publishTime).toISOString();
