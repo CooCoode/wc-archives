@@ -87,6 +87,14 @@ class SiteGenerator {
     }
 
     async generateArticlePage(article) {
+
+        // Check the .done is existed to make sure this article is not processed yet
+        const donePath = path.join(this.outputDir, 'articles', article.id, '.done');
+        if (await fs.pathExists(donePath)) {
+            console.log(`Skipping article ${article.id}: Already processed`);
+            return;
+        }
+
         try {
             const template = await this.loadTemplate('article');
             
@@ -530,6 +538,8 @@ class SiteGenerator {
                 cover: templateData.cover.replace(/&#x2F;/g, '/'),
             }, {}, { escape: (text) => text }); // Disable HTML escaping
             await fs.writeFile(path.join(articleDir, 'index.html'), html);
+
+            await fs.writeFile(path.join(articleDir, '.done'), ''); // Mark the article as processed
             console.log(`Generated page for article ${article.id}`);
         } catch (error) {
             console.error(`Error generating page for article ${article.id}:`, error.message);
