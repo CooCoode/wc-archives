@@ -1,6 +1,29 @@
 {
-  "lastUpdate": "2025-03-13 05:33:29",
+  "lastUpdate": "2025-03-14 01:40:05",
   "articles": [
+    {
+      "id": "2648459145_1",
+      "title": "招募｜「超人类主义」翻译及活动小组",
+      "author": "唐晗",
+      "publishTime": "2025-03-13 12:10:10",
+      "categories": [
+        "SeeDAO",
+        "涌现"
+      ],
+      "link": "https://mp.weixin.qq.com/s/x535t45wP195D9Mg4DNpZg",
+      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/TqajLKDg1xUjv5hk3nuQzFVmcqEOscqX24ILo0icWM751xribIlibIlqYlZ8CplBCXQpWwiajB8wCgiaxvnIGsGjGXg/0?wx_fmt=jpeg",
+      "digest": "为Web3与AI交叉领域的思想探索贡献中文世界的学术力量"
+    },
+    {
+      "id": "2648459145_2",
+      "title": "招募 | 香港Web3嘉年华活动小组",
+      "author": "SeeDAO",
+      "publishTime": "2025-03-13 12:10:10",
+      "categories": [],
+      "link": "https://mp.weixin.qq.com/s/rVnWP-Pfh-m25-wcyfh8yQ",
+      "cover": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/TqajLKDg1xUjv5hk3nuQzFVmcqEOscqXSh1OY9y8MASKMxFC1AHSh9diaMBNnmzaj0nt4o8fXqua5PaQTvnZSibw/0?wx_fmt=jpeg",
+      "digest": ""
+    },
     {
       "id": "2648459088_1",
       "title": "线上圆桌：加密让这个世界变得更好了吗？| 路边野餐",
