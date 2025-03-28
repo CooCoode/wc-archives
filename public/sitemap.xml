@@ -5,11 +5,147 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.seedao.xyz/</loc>
-        <lastmod>2025-03-16T01:46:50.356Z</lastmod>
+        <lastmod>2025-03-28T04:14:40.150Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459334_1/index.html</loc>
+        <lastmod>2025-03-26T15:05:31.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459334_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459334_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-26T15:05:31.000Z</news:publication_date>
+            <news:title>游牧文化 ｜ SeeDAO超人类主义专栏上线</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459317_1/index.html</loc>
+        <lastmod>2025-03-25T15:13:04.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459317_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459317_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-25T15:13:04.000Z</news:publication_date>
+            <news:title>SIP-322 : SeeDAO 数字城邦战略小组正式成立</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459317_2/index.html</loc>
+        <lastmod>2025-03-25T15:13:04.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459317_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459317_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-25T15:13:04.000Z</news:publication_date>
+            <news:title>SeeDAO 帮推 | 超级链残酷共学：Optimism 残酷共学第二期</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459303_1/index.html</loc>
+        <lastmod>2025-03-21T14:11:11.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459303_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459303_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-21T14:11:11.000Z</news:publication_date>
+            <news:title>SeeDAO | 2025香港Web3嘉年华参会一文全攻略</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459303_2/index.html</loc>
+        <lastmod>2025-03-21T14:11:11.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459303_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459303_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-21T14:11:11.000Z</news:publication_date>
+            <news:title>招募 | SeeDAO 媒体中心 S10季度招募</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459227_1/index.html</loc>
+        <lastmod>2025-03-19T14:34:10.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459227_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459227_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-19T14:34:10.000Z</news:publication_date>
+            <news:title>招募 ｜ SeeDAO乡建考察团第一期即刻起航</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459227_2/index.html</loc>
+        <lastmod>2025-03-19T14:34:10.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459227_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459227_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-19T14:34:10.000Z</news:publication_date>
+            <news:title>P3提案 ｜ 成立数字城邦战略小组</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459161_1/index.html</loc>
+        <lastmod>2025-03-17T12:39:02.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459161_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459161_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-17T12:39:02.000Z</news:publication_date>
+            <news:title>乡建DAO:乡村建设与DAO的结合</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.seedao.xyz/articles/2648459145_1/index.html</loc>
