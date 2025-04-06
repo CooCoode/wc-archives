@@ -5,11 +5,147 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.seedao.xyz/</loc>
-        <lastmod>2025-03-31T01:48:37.127Z</lastmod>
+        <lastmod>2025-04-06T01:49:28.405Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459467_1/index.html</loc>
+        <lastmod>2025-04-04T15:11:43.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459467_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459467_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-04T15:11:43.000Z</news:publication_date>
+            <news:title>提案体检报告出炉！SeeDAO 三层提案机制现状 &amp; 2024-2025数据全解读</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459467_2/index.html</loc>
+        <lastmod>2025-04-04T15:11:43.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459467_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459467_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-04T15:11:43.000Z</news:publication_date>
+            <news:title>回顾 ｜ 从新手到 OG：SeeDAO 的三层提案机制（第一章）</news:title>
+            <news:keywords>SeeDAO,Web3,SeeDAO三层提案机制</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459467_3/index.html</loc>
+        <lastmod>2025-04-04T15:11:43.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459467_3/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459467_3/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-04T15:11:43.000Z</news:publication_date>
+            <news:title>回顾 ｜ 从新手到OG ｜ SeeDAO的三层提案机制（第二章）</news:title>
+            <news:keywords>SeeDAO,Web3,SeeDAO三层机制</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459419_1/index.html</loc>
+        <lastmod>2025-04-03T13:34:27.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459419_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459419_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-03T13:34:27.000Z</news:publication_date>
+            <news:title>游牧地图 | 全国18家数字游民社区汇总，总有一个属于你的精神村落</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459419_2/index.html</loc>
+        <lastmod>2025-04-03T13:34:27.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459419_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459419_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-03T13:34:27.000Z</news:publication_date>
+            <news:title>超人类主义专栏Vol.2｜生物技术，基因工程，干细胞和克隆——它们都是什么以及分别有什么用？</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459375_1/index.html</loc>
+        <lastmod>2025-04-02T15:46:02.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459375_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459375_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-02T15:46:02.000Z</news:publication_date>
+            <news:title>游牧企划 | 《SeeDAO 2026 数字游民日历》共创启动！</news:title>
+            <news:keywords>数字游民企划,共创,#游牧文化</news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459375_2/index.html</loc>
+        <lastmod>2025-04-02T15:46:02.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459375_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459375_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-02T15:46:02.000Z</news:publication_date>
+            <news:title>SeeDAO友推 | HUEHUEO - 3D潮品将亮相Web3嘉年华，码住攻略</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459360_1/index.html</loc>
+        <lastmod>2025-04-01T00:29:48.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459360_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459360_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01T00:29:48.000Z</news:publication_date>
+            <news:title>超人类主义专栏Vol.1｜关于超人类主义的普遍问题</news:title>
+            <news:keywords>SeeDAO,#超人类主义专栏,#游牧文化,DAO,Web3</news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.seedao.xyz/articles/2648459334_1/index.html</loc>
