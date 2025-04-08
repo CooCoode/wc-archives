@@ -5,11 +5,45 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://wc-archives.seedao.xyz/</loc>
-        <lastmod>2025-04-07T01:46:53.578Z</lastmod>
+        <lastmod>2025-04-08T01:44:22.029Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/"/>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459482_1/index.html</loc>
+        <lastmod>2025-04-07T09:20:11.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459482_1/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459482_1/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-07T09:20:11.000Z</news:publication_date>
+            <news:title>SeeDAO香港观影：【天空之城】与数字游民</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://wc-archives.seedao.xyz/articles/2648459482_2/index.html</loc>
+        <lastmod>2025-04-07T09:20:11.000Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://wc-archives.seedao.xyz/articles/2648459482_2/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wc-archives.seedao.xyz/articles/2648459482_2/index.html"/>
+        <news:news>
+            <news:publication>
+                <news:name>SeeDAO WeChat Archives</news:name>
+                <news:language>zh</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-07T09:20:11.000Z</news:publication_date>
+            <news:title>转载 | SeeDAO乡建考察团赴南屏开展专题调研，探索数字技术与乡村振兴融合路径</news:title>
+            <news:keywords></news:keywords>
+        </news:news>
     </url>
     <url>
         <loc>https://wc-archives.seedao.xyz/articles/2648459467_1/index.html</loc>
